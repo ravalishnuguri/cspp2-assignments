@@ -8,7 +8,7 @@ final class Solution {
     Do not modify this main function.
     @param      args  The arguments
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         /* main function*/
         Scanner s = new Scanner(System.in);
         int base = s.nextInt();
@@ -22,7 +22,7 @@ final class Solution {
     @param      b     { parameter_description }
     @return     { returns a power b }
     */
-    static long power(int a, int b) {
+    static long power(final int a, final int b) {
         /*function for power */
         if (b != 0) {
             return (a * (power(a, b - 1)));
