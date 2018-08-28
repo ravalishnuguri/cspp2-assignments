@@ -26,6 +26,6 @@ public class Solution {
 		// return root1,  root2;
 		//System.out.format("%.1f %.1f",root1,root2);
 		// System.out.println(root2);
-		System.out.println(root1+' '+root2);
+		System.out.println(root1+" "+root2);
 	}
 }
