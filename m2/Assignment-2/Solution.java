@@ -22,7 +22,7 @@ public class Solution {
 		double quad;
 		quad = Math.sqrt((y*y)-(4*x*z));
 		root1 = (-y + quad)/2*x;
-		root2 = (-y + quad)/2-x;
+		root2 = (-y - quad)/2-x;
 		// return root1,  root2;
 		System.out.println(root1);
 		System.out.println(root1);
