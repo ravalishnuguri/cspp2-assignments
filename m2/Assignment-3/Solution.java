@@ -3,6 +3,9 @@ import java.util.Scanner;
  * Class for solution.
  **/
 final class Solution {
+    /**
+ * Class for solution.
+ **/
     private Solution() { }
     /**
     @param      args  The arguments
