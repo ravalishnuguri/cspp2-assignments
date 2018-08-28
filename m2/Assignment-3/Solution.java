@@ -1,6 +1,5 @@
 import java.util.Scanner;
-public class Solution
-{
+public class Solution {
     /*
     Do not modify this main function.
     */
@@ -14,8 +13,7 @@ public class Solution
     /*
     Need to write the power function and print the output.
     */
-    static long power(int a, int b)
-    {
+    static long power(int a, int b) {
         if(b!=0)
         {
             return (a*(power(a, b-1)));
