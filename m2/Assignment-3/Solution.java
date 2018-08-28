@@ -19,10 +19,8 @@ public class Solution {
     }
     /*
     Need to write the power function and print the output.
-    
     @param      a     { parameter_description }
     @param      b     { parameter_description }
-    
     @return     { returns a power b }
     */
     static long power(int a, int b) {
