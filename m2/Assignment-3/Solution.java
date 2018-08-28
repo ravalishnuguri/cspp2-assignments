@@ -1,13 +1,14 @@
 import java.util.Scanner;
 /**
  * Class for solution.
- */
+ **/
 final class Solution {
     private Solution() { }
-    /*
-    Do not modify this main function.
+    /**
     @param      args  The arguments
-    */
+    Do not modify this main function.
+    
+    **/
     public static void main(final String[] args) {
         /* main function*/
         Scanner s = new Scanner(System.in);
@@ -23,7 +24,6 @@ final class Solution {
     @return     { returns a power b }
     */
     static long power(final int a, final int b) {
-        /*function for power */
         if (b != 0) {
             return (a * (power(a, b - 1)));
         }
