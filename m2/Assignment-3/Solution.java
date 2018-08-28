@@ -1,9 +1,14 @@
 import java.util.Scanner;
 
-public class Solution /*
+/**
+ * Class for solution.
+ */
+public class Solution {
+    /*
     Do not modify this main function.
-    */{
-
+    
+    @param      args  The arguments
+    */
     public static void main(String[] args) {
         /* main function*/
         Scanner s = new Scanner(System.in);
@@ -14,6 +19,11 @@ public class Solution /*
     }
     /*
     Need to write the power function and print the output.
+    
+    @param      a     { parameter_description }
+    @param      b     { parameter_description }
+    
+    @return     { returns a power b }
     */
     static long power(int a, int b) {
         /*function for power */
