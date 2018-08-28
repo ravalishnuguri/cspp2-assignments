@@ -32,7 +32,8 @@ final class Solution {
         double root1;
         double root2;
         double quad;
-        quad = Math.sqrt((y * y) - (4 * x * z));
+        int b = 4;
+        quad = Math.sqrt((y * y) - (b * x * z));
         root1 = (-y + quad) / (2 * x);
         root2 = (-y - quad) / (2 * x);
         // return root1,  root2; System.out.format("%.1f %.1f",root1,root2);
