@@ -1,5 +1,8 @@
 import java.util.Scanner;
 // import java.lang.Math;
+/** 
+ * program for quadratic expression
+ **/
 final class Solution {
     /**
      * Constructs the object.
