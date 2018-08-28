@@ -24,8 +24,8 @@ public class Solution {
 		root1 = (-y + quad)/2*x;
 		root2 = (-y - quad)/2*x;
 		// return root1,  root2;
-		System.out.println(root1);
-		System.out.println(root2);
+		System.out.format("%f %f",root1,root2);
+		// System.out.println(root2);
 
 	}
 }
