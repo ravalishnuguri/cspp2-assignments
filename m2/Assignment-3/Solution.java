@@ -2,11 +2,10 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+final class Solution {
     private Solution() { }
     /*
     Do not modify this main function.
-    
     @param      args  The arguments
     */
     public static void main(String[] args) {
