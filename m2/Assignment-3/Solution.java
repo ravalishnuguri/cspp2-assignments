@@ -9,8 +9,7 @@ final class Solution {
     private Solution() { }
     /**
     @param      args  The arguments
-    Do not modify this main function.
-    
+    Do not modify this main function. 
     **/
     public static void main(final String[] args) {
         /* main function*/
