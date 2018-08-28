@@ -32,7 +32,7 @@ final class Solution {
         double root1;
         double root2;
         double quad;
-        int b = 4;
+        final int b = 4;
         quad = Math.sqrt((y * y) - (b * x * z));
         root1 = (-y + quad) / (2 * x);
         root2 = (-y - quad) / (2 * x);
