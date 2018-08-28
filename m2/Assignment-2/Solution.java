@@ -25,7 +25,7 @@ public class Solution {
 		root2 = (-y - quad)/2-x;
 		// return root1,  root2;
 		System.out.println(root1);
-		System.out.println(root1);
+		System.out.println(root2);
 
 	}
 }
