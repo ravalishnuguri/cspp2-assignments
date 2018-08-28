@@ -28,8 +28,7 @@ final class Solution {
     @param      y     { parameter_description }
     @param      z     { parameter_description }
     **/
-    static void roots(final int x, final int y, final int z)
-    {
+    static void roots(final int x, final int y, final int z) {
         double root1;
         double root2;
         double quad;
@@ -41,4 +40,3 @@ final class Solution {
         System.out.println(root1 + " " + root2);
     }
 }
-
