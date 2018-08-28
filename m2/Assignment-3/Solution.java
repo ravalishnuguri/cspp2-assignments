@@ -7,9 +7,9 @@ public class Solution {
     public static void main(String[] args) {
         /* main function*/
         Scanner s = new Scanner(System.in);
-        int base=s.nextInt();
-        int exponent=s.nextInt();
-        long result=power(base,exponent);
+        int base = s.nextInt();
+        int exponent = s.nextInt();
+        long result = power(base,exponent);
         System.out.println(result);
     }
     /*
@@ -17,8 +17,8 @@ public class Solution {
     */
     static long power(int a, int b) {
         /*function for power */
-        if (b!=0) {
-            return (a*(power(a, b-1)));
+        if (b != 0) {
+            return (a * (power(a, b - 1)));
         }
         else {
             return 1;
