@@ -20,12 +20,12 @@ final class Solution {
         long result = power(base, exponent);
         System.out.println(result);
     }
-    /*
+    /**
     Need to write the power function and print the output.
     @param      a     { parameter_description }
     @param      b     { parameter_description }
     @return     { returns a power b }
-    */
+    **/
     static long power(final int a, final int b) {
         if (b != 0) {
             return (a * (power(a, b - 1)));
