@@ -29,8 +29,7 @@ final class Solution {
     static long power(final int a, final int b) {
         if (b != 0) {
             return (a * (power(a, b - 1)));
-        }
-        else {
+        }else {
             return 1;
         }
     }
