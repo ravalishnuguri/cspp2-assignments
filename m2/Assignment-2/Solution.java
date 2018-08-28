@@ -1,7 +1,10 @@
 import java.util.Scanner;
-import java.lang.Math;
+// import java.lang.Math;
 final class Solution {
-
+    /**
+     * Constructs the object.
+     **/
+    private Solution() { }
     /**
      * function_description.
      *
