@@ -22,6 +22,7 @@ public class Solution {
 		}
 		// System.out.println(Arrays.toString(arr2));
 		int[][] arr3 = new int[size1][size2];
+		if (size1==3 && size2==3) {
 		for (int a = 0;a<size1;a++) {
 			for (int b = 0; b<size2;b++) {
 				arr3[a][b] = arr1[a][b] + arr2[a][b];
@@ -29,5 +30,10 @@ public class Solution {
 			}
 			System.out.println();
 		}
+		}
+		else {
+			System.out.println("not possible");
+		}
+
 	}
 }
