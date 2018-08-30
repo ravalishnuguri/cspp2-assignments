@@ -26,9 +26,9 @@ public class Solution {
 		for (int a = 0;a<size1;a++) {
 			for (int b = 0; b<size2;b++) {
 				arr3[a][b] = arr1[a][b] + arr2[a][b];
-				// System.out.print(arr3[a][b]+" ");
+				System.out.print(arr3[a][b]);
 			}
-			System.out.print(Arrays.toString(arr3[a]));
+			// System.out.print(Arrays.toString(arr3[a]));
 			System.out.println();
 		}
 		}
