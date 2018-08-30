@@ -28,7 +28,7 @@ public class Solution {
 				arr3[a][b] = arr1[a][b] + arr2[a][b];
 				// System.out.print(arr3[a][b]+" ");
 			}
-			System.out.print(arr3[a]);
+			System.out.print(Arrays.toString(arr3[a]));
 			System.out.println();
 		}
 		}
