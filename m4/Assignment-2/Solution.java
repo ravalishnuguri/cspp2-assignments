@@ -43,7 +43,7 @@ final class Solution {
             // System.out.print(Arrays.toString(arr3[a]));
             System.out.println();
         }
-        }else {
+        } else {
             System.out.println("not possible");
         }
 
