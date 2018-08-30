@@ -1,5 +1,5 @@
 import java.util.Scanner;
-/** import for taking input
+/** import for taking input.
 **/
 final class Solution {
 /**
@@ -7,12 +7,10 @@ final class Solution {
 **/
 	private Solution() { }
 	/**
-	init method for Solotion.
-	
+	init method for Solotion.	
 	@param      args  The arguments.
 	**/
-	public static void main(final String[] args)
-	{
+	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		int[] arr = new int[n];
