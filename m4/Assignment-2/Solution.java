@@ -30,8 +30,8 @@ final class Solution {
         }
         // System.out.println(Arrays.toString(arr2));
         int[][] arr3 = new int[size1][size2];
-        int l = 3;
-        if (size1 == l && size2 == l) {
+        int l1 = 3;
+        if (size1 == l1) {
         for (int a = 0; a < size1; a++) {
             for (int b = 0; b < size2; b++) {
                 arr3[a][b] = arr1[a][b] + arr2[a][b];
