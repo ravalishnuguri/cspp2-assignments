@@ -2,7 +2,7 @@ import java.util.Scanner;
 /** import for taking input.
 **/
 final class Solution {
-    /** init method for class
+    /** init method for class.
     **/
     private Solution() { }
     /**
@@ -30,13 +30,13 @@ final class Solution {
         }
         // System.out.println(Arrays.toString(arr2));
         int[][] arr3 = new int[size1][size2];
-        int length = 3;
-        if (size1 == length && size2 == length) {
+        int l = 3;
+        if (size1 == l && size2 == l) {
         for (int a = 0; a < size1; a++) {
             for (int b = 0; b < size2; b++) {
                 arr3[a][b] = arr1[a][b] + arr2[a][b];
                 System.out.print(arr3[a][b]);
-                if (b < size2-1) {
+                if (b < size2 - 1) {
                     System.out.print(" ");
                 }
             }
