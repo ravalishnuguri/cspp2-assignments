@@ -26,12 +26,12 @@ final class Solution {
      * @return     { description_of_the_return_value }
      **/
     static String binaryToDecimal(final String str) {
-        int k = 0;
+        int dec = 0;
         for (int j = 0; j < str.length(); j++) {
             if (str.charAt(j) == '1') {
-                k = (int) (k + Math.pow(2, str.length() - 1 - j));
+                dec = (int) (dec + Math.pow(2, str.length() - 1 - j));
             }
         }
-        return k + "";
+        return dec + "";
     }
 }
