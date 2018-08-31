@@ -1,9 +1,5 @@
-
 // Given an String, Write a java method that returns the decimal value for the given binary string.
-
-
 import java.util.Scanner;
-import java.lang.Math;
 public class Solution
 {/*
     Do not modify this main function.
@@ -19,6 +15,7 @@ public class Solution
         }
     }
     static String binaryToDecimal(String str) {
+        int newstr = Integer.parseInt(str);
         int j = 0;
         for (int i = 0; i<str.length();i++) {
             if (str.charAt(i) == '1') {
@@ -27,5 +24,4 @@ public class Solution
         }
         return j+"";
     }
-
 }
