@@ -21,7 +21,7 @@ final class Solution {
      @param      str   The string.
      @return     { description_of_the_return_value }
     **/
-    static String reverseString(String str) {
+    static String reverseString(final String str) {
         StringBuilder sb = new StringBuilder();
         for (int i = str.length() - 1; i >= 0; i--) {
             sb.append(str.charAt(i));
