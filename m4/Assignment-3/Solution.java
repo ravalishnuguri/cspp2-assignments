@@ -15,13 +15,12 @@ public class Solution
         }
     }
     static String binaryToDecimal(String str) {
-
-        int j = 0;
-        for (int i = 0; i<str.length();i++) {
-            if (str.charAt(i) == '1') {
-                j = (int) (j + Math.pow(2,str.length() - 1 - j));
+        int k = 0;
+        for (int j = 0; j<str.length();j++) {
+            if (str.charAt(j) == '1') {
+                k = (int) (k + Math.pow(2,str.length() - 1 - k));
             }
         }
-        return j+"";
+        return k+"";
     }
 }
