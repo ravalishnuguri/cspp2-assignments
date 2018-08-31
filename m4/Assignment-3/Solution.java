@@ -3,6 +3,7 @@
 
 
 import java.util.Scanner;
+import java.lang.Math;
 public class Solution
 {/*
     Do not modify this main function.
@@ -24,7 +25,7 @@ public class Solution
                 j = (int) (j + Math.pow(2,str.length() - 1 - j));
             }
         }
-        return j + "";
+        return j+"";
     }
 
 }
