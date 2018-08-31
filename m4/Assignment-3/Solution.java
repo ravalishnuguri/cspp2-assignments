@@ -18,9 +18,9 @@ public class Solution
         int k = 0;
         for (int j = 0; j<str.length();j++) {
             if (str.charAt(j) == '1') {
-                k = (int) (k + Math.pow(2,str.length() - 1 - k));
+                k = (int) (k + Math.pow(2,str.length() - 1 - j));
             }
         }
-        return k+"";
+        return k + "";
     }
 }
