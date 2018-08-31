@@ -7,7 +7,7 @@ public class Solution
     public static void main(String[] args)
     {
         Scanner sc=new Scanner(System.in);
-        int n= sc.nextInt();
+        int n = Integer.parseInt(sc.nextLine());
         for(int i=0;i<=n;i++){
             String s=sc.nextLine();
             String res=binaryToDecimal(s);//Write binaryToDecimal function
@@ -15,7 +15,6 @@ public class Solution
         }
     }
     static String binaryToDecimal(String str) {
-        int newstr = Integer.parseInt(str);
         int j = 0;
         for (int i = 0; i<str.length();i++) {
             if (str.charAt(i) == '1') {
