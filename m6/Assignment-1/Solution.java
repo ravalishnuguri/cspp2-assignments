@@ -24,8 +24,7 @@ public final class Solution {
             int factors = 0;
             if (i % 2 == 0) {
                 flag = 0;
-            }
-            else {
+            } else {
                 for (int j = 1; j <= i; j++) {
                     if (i % j == 0) {
                         factors++;
