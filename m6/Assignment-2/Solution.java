@@ -18,7 +18,7 @@ final class Solution {
      *
      * @param      a     Matrix of which the elements to be rounded
      * @param      rows     Number of rows
-     * @param      columns     Number of columns
+     * @param      col     Number of columns
      *
      * @return     Matrix of the rounded elements
      */
