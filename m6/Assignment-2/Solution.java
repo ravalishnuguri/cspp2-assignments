@@ -29,15 +29,15 @@ final class Solution {
         for (int i = 0; i < size; i++) {
             mul[i] = i * m;
         }
-        int temp = 0;
+        int newarr = 0;
         for (int j = 0; j < rows; j++) {
-            for (int k = 0; k < col ; k++) {
+            for (int k = 0; k < col; k++) {
                 for (int i = 0; i < mul.length; i++) {
-                    temp = Math.round(a[j][k] - mul[i]);
-                    if (temp < mid) {
+                    newarr = Math.round(a[j][k] - mul[i]);
+                    if (newarr < mid) {
                         a[j][k] = mul[i];
                         break;
-                    } else if (temp == mid) {
+                    } else if (newarr == mid) {
                         a[j][k] = mul[i + 1];
                         break;
                     }
