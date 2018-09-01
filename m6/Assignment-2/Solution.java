@@ -30,9 +30,9 @@ final class Solution {
             mul[i] = i * m;
         }
         int temp = 0;
-        for (int j = 0; j < rows;j++) {
-            for (int k = 0;k < col ;k++) {
-                for (int i = 0;i < mul.length;i++) {
+        for (int j = 0; j < rows; j++) {
+            for (int k = 0; k < col ; k++) {
+                for (int i = 0; i < mul.length; i++) {
                     temp = Math.round(a[j][k] - mul[i]);
                     if (temp < mid) {
                         a[j][k] = mul[i];
