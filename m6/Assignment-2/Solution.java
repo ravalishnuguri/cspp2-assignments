@@ -36,10 +36,10 @@ final class Solution {
                 for (int i = 0;i<mul.length;i++) {
                     temp = Math.round(a[j][k] - mul[i]);
                     if (temp < mid) {
-                        a[i][j] = mul[k];
+                        a[j][k] = mul[i];
                         break;
                     } else if (temp == mid) {
-                        a[j][k] = mul[i -1];
+                        a[j][k] = mul[i +1];
                         break;
                     }
                 }
