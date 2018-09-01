@@ -20,8 +20,8 @@ public final class Solution {
     static void oddComposites(final int n) {
 	// write your code here
     	int flag = 0;
-    	int factors = 0;
     	for (int i = 2; i <= n; i++) {
+            int factors = 0;
     		if(i %2==0) {
     			flag = 0;
     		}
@@ -30,8 +30,9 @@ public final class Solution {
     				if (i%j==0) {
     					factors++;
     				}
+
     		}
-    		if (factors>3) {
+    		if (factors>2) {
     			System.out.println(i);
     		}
     		}
