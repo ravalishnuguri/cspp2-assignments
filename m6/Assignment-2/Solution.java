@@ -39,7 +39,7 @@ final class Solution {
                         a[i][j] = mul[k];
                         break;
                     } else if (temp == mid) {
-                        a[j][k] = mul[i+1];
+                        a[j][k] = mul[i -1];
                         break;
                     }
                 }
