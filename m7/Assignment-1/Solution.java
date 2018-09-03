@@ -1,10 +1,22 @@
 import java.util.Scanner;
-class InputValidator {
+/**
+ * Class for input validator.
+ **/
+final class InputValidator {
+	/**
+	 * declaring string a.
+	 **/
 	String a;
-	public InputValidator(String str) {
+	public InputValidator(final String str) {
+		/**
+		 * assigning string to variable a.
+		 **/
 		a = str;
 	}
 	public boolean validateData() {
+		/**
+		 * using conditional boolean to get the result.
+		 **/
 		final int b = 6;
 		if (a.length() >= b) {
 			// System.out.println("True");
@@ -17,15 +29,18 @@ class InputValidator {
 	}
 	/*Write the atrributes and methods for InputValidator*/
 }
-public class Solution
-{
-	public static void main(final String args[])
-    {
+/**
+ * Class for solution.
+ **/
+public class Solution {
+	/**
+	 * main method of the program.
+	 */
+	public static void main(final String args[]) {
     	Scanner s = new Scanner(System.in);
     	String input = s.next();
-    	InputValidator i = new InputValidator(input);    	
+    	InputValidator i = new InputValidator(input);
     	System.out.println(i.validateData());
-
     }
 
 }
