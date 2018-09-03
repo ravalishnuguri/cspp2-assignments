@@ -6,11 +6,11 @@ final class InputValidator {
     /**
      * delcaring string a.
      **/
-    String data;
+    private String data;
      /**
      * delcaring string a.
      **/
-    int length;
+    private int length;
     /**
      * Constructs the object.
      *
