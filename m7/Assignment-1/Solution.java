@@ -13,6 +13,11 @@ final class InputValidator {
          **/
         a = str;
     }
+    /**
+     * valid date method
+     *
+     * @return     boolean type is returned in the condition fails.
+     */
     public boolean validateData() {
         /**
          * using conditional boolean to get the result.
@@ -34,8 +39,13 @@ final class InputValidator {
  **/
 public class Solution {
     /**
+     * Constructs the object.
+     **/
+    private Solution() { }
+    /**
      * main method of the program.
-     */
+     *@param args for main function.
+     **/
     public static void main(final String args[]) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
