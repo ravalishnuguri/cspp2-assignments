@@ -3,6 +3,9 @@ import java.util.Scanner;
  * Class for input validator.
  **/
 final class InputValidator {
+    /**
+     * delcaring string a.
+     **/
     String a;
     /**
      * Constructs the object.
