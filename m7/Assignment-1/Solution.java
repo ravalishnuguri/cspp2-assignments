@@ -8,7 +8,7 @@ final class InputValidator {
      * Constructs the object.
      *
      * @param      str   The string.
-     */
+     **/
     public InputValidator(final String str) {
         /**
          * assigning string to variable a.
@@ -19,7 +19,7 @@ final class InputValidator {
      * valid date method.
      *
      * @return     boolean type is returned in the condition fails.
-     */
+     **/
     public boolean validateData() {
         /**
          * using conditional boolean to get the result.
@@ -47,7 +47,7 @@ final class Solution {
      * main method of the program.
      *@param args for main function.
      **/
-    public static void main(final String args[]) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
         InputValidator i = new InputValidator(input);
