@@ -1,11 +1,12 @@
-import java.util.*;
+import java.util.Scanner;
 class InputValidator {
 	String a;
 	public InputValidator(String str) {
 		a = str;
 	}
 	public boolean validateData() {
-		if (a.length()>=6) {
+		final int b = 6;
+		if (a.length() >= b) {
 			// System.out.println("True");
 			return true;
 		}
@@ -18,11 +19,11 @@ class InputValidator {
 }
 public class Solution
 {
-	public static void main(String args[])
+	public static void main(final String args[])
     {
-    	Scanner s=new Scanner(System.in);
-    	String input=s.next();
-    	InputValidator i=new InputValidator(input);    	
+    	Scanner s = new Scanner(System.in);
+    	String input = s.next();
+    	InputValidator i = new InputValidator(input);    	
     	System.out.println(i.validateData());
 
     }
