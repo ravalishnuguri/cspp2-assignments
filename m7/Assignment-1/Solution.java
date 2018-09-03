@@ -5,7 +5,7 @@ class InputValidator {
 		a = str;
 	}
 	public boolean validateData() {
-		if (a.length()<=6) {
+		if (a.length()>=6) {
 			// System.out.println("True");
 			return true;
 		}
