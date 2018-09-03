@@ -6,17 +6,19 @@ final class InputValidator {
     /**
      * delcaring string a.
      **/
-    String a;
+    String data;
+    int length;
     /**
      * Constructs the object.
      *
      * @param      str   The string.
      **/
-    public InputValidator(final String str) {
+     InputValidator(final String str) {
         /**
          * assigning string to variable a.
          **/
-        a = str;
+        data = str;
+        length = str.length();
     }
     /**
      * valid date method.
@@ -28,13 +30,12 @@ final class InputValidator {
          * using conditional boolean to get the result.
          **/
         final int b = 6;
-        if (a.length() >= b) {
+        if (length >= b) 
             // System.out.println("True");
             return true;
-        } else {
+    
             // System.out.println("False");
-            return false;
-        }
+        return false;
     }
     /*Write the atrributes and methods for InputValidator*/
 }
