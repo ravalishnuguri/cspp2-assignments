@@ -7,6 +7,9 @@ final class InputValidator {
      * delcaring string a.
      **/
     String data;
+     /**
+     * delcaring string a.
+     **/
     int length;
     /**
      * Constructs the object.
@@ -30,10 +33,10 @@ final class InputValidator {
          * using conditional boolean to get the result.
          **/
         final int b = 6;
-        if (length >= b) 
+        if (length >= b) {
             // System.out.println("True");
             return true;
-    
+        }
             // System.out.println("False");
         return false;
     }
