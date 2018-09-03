@@ -3,10 +3,12 @@ import java.util.Scanner;
  * Class for input validator.
  **/
 final class InputValidator {
-    /**
-     * declaring string a.
-     **/
     String a;
+    /**
+     * Constructs the object.
+     *
+     * @param      str   The string.
+     */
     public InputValidator(final String str) {
         /**
          * assigning string to variable a.
@@ -14,7 +16,7 @@ final class InputValidator {
         a = str;
     }
     /**
-     * valid date method
+     * valid date method.
      *
      * @return     boolean type is returned in the condition fails.
      */
@@ -26,8 +28,7 @@ final class InputValidator {
         if (a.length() >= b) {
             // System.out.println("True");
             return true;
-        }
-        else {
+        } else {
             // System.out.println("False");
             return false;
         }
@@ -37,7 +38,7 @@ final class InputValidator {
 /**
  * Class for solution.
  **/
-public class Solution {
+final class Solution {
     /**
      * Constructs the object.
      **/
