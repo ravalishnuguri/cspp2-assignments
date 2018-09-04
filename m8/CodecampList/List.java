@@ -158,7 +158,7 @@ public class List {
         size--;
     }
     else {
-        System.out.println("-1");
+        System.out.println("Invalid Position Exception");
     }
 }
     public int get(int index) {
