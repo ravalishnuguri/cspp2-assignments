@@ -150,7 +150,7 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-    if (index <= 0 && index<=size-1 ) {
+    if (index >= 0 && index<=size-1 ) {
         for(int i = index; i<size-1; i++) {
             arr[i]=arr[i+1];
         }
@@ -158,20 +158,24 @@ public class List {
         size--;
     }
     else {
-        System.out.println("Invalid Position Exception");
+        System.out.println("-1");
     }
 }
     public int get(int index) {
         // Replace the code below to write the code for get
-        int x = 0;
-        int count = 0;
-        for (int i = 0; i < size; i++) {
-            if (i==index) {
-                x = arr[i];
-            }
-        }
-        if (count == 1) {
-            return x;
+        // int x = 0;
+        // int count = 0;
+        // for (int i = 0; i < size; i++) {
+        //     if (i==index) {
+        //         x = arr[i];
+        //     }
+        // }
+        // if (count == 1) {
+        //     return x;
+        // }
+        // return -1;
+        if (index >=0 && index < size) {
+            return arr[index]
         }
         return -1;
     }
