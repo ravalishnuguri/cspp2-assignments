@@ -174,7 +174,7 @@ public class List {
         //     return x;
         // }
         // return -1;
-        if (index >=0 && index < size) {
+        if (index >=0 && index <= size) {
             return arr[index];
         }
         return -1;
@@ -243,7 +243,7 @@ public class List {
         int count = 0;
         for (int i = 0; i < size; i++) {
             if(arr[i]==item) {
-                i = x;
+                x = i;
                 count++;
             }
         }
