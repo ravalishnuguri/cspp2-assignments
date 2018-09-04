@@ -1,9 +1,12 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * List of array.
+ */
 
 public class List {
-    //Implement all the methods mentioned to build a ListADT
+    // Implement all the methods mentioned to build a ListADT
 
     /**
      * The goal for the list is to store items.
@@ -25,6 +28,9 @@ public class List {
      * will protect the array such corruption.
      * This is a hard concept to understand. Discuss with your mentor.
     **/
+    /**
+     * declaring a integer array.
+     */
     private int[] arr;
     
     // declare a private int[]
@@ -50,6 +56,9 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      * 
      */
+    /**
+     * declaring a integer.
+     **/
     private int size;
 
     // declare a private int size
@@ -74,7 +83,7 @@ public class List {
         // An empty list has how many items?
         // That is the initial value to use for size.
         arr = new int[10];
-        size =0;
+        size = 0;
 
     }
     
@@ -135,7 +144,7 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         // remove(index-1);
@@ -161,7 +170,7 @@ public class List {
         System.out.println("Invalid Position Exception");
     }
 }
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         // int x = 0;
         // int count = 0;
@@ -219,11 +228,11 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         int count = 0;
         for (int i = 0; i< size; i++) {
-            if (arr[i] == item) 
+            if (arr[i] == item)
                 count++;
         }
         if (count == 1) {
@@ -237,7 +246,7 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         int x = 0;
         int count = 0;
@@ -253,7 +262,12 @@ public class List {
         return -1;
     }
 
-    public static void main(String[] args) {
+    /**
+     * function_description.
+     *
+     * @param      args  The arguments
+     **/
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -290,8 +304,9 @@ public class List {
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
                 case "get":
-                if (l.get(Integer.parseInt(tokens[1])) != -1)
+                if (l.get(Integer.parseInt(tokens[1])) != -1) {
                     System.out.println(l.get(Integer.parseInt(tokens[1])));
+                }
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
