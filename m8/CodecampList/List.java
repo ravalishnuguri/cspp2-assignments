@@ -82,63 +82,55 @@ public class List {
         arr = new int[length];
         size = 0;
     }
-    /*
-     * The add method does what the name suggests.
-     * Add an int item to the list.
-     * The assumption is to store the item at the end of the list
-     * What is the end of the list?
-     * Is it the same as the end of the array?
-     * Think about how you can use the size variable to add item
-     * to the list.
-     * 
+    /**
+     * The add method does what the name suggests. Add an int item to the list.
+     * The assumption is to store the item at the end of the list What is the
+     * end of the list? Is it the same as the end of the array? Think about how
+     * you can use the size variable to add item to the list.
+     *
      * The method returns void (nothing)
-     */
+     *
+     * @param      item  The item
+     **/
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
         // arr = add(item, size-1);
         if (size < 0) {
             arr[size + 1] = item;
-        }
-        else {
+        } else {
             arr[size] = item;
         }
         size = size + 1;
-
     }
 
-    /*
-     * The size method returns the value of the size.
-     * The purpose of the method is to announce the size of the list
-     * to the objects outside the list
-     * 
+    /**
+     * The size method returns the value of the size. The purpose of the method
+     * is to announce the size of the list to the objects outside the list
+     *
      * The method returns an int. Empty list should return 0.
-     */
+     *
+     * @return     { description_of_the_return_value }
+     **/
     public int size() {
-        // replace the code below to implement the size method
-        // size = arr.length;
+        // replace the code below to implement the size method size =
+        // arr.length;
         return size;
     }
-
-    /*
-     * The remove method does what the name suggests.
-     * Removes an int item, specified by the index argument, from the list
-     * It also does an additional step.
-     * Think about what happens when
-     * an item is removed from the middle of the list
-     * It creates a hole in the list, right?
-     * This would mean, all the items that are
-     * to the right side of the removed item should be
-     * moved to the left by one position.
-     * Here is an example:
-     * array = [1,2,3,0,0,0,0,0,0,0]
-     * remove(2) would remove the item 2
-     * But how do you remove the item from an array?
-     * Well, the way to remove it is to move all
-     * the items, that are to the right of the removed item, to the left
-     * So, the new array looks like this.
-     * array = [1,3,0,0,0,0,0,0,0,0]
-     * The method returns void (nothing)
-     */
+    /**
+     * The remove method does what the name suggests. Removes an int item,
+     * specified by the index argument, from the list It also does an additional
+     * step. Think about what happens when an item is removed from the middle of
+     * the list It creates a hole in the list, right? This would mean, all the
+     * items that are to the right side of the removed item should be moved to
+     * the left by one position. Here is an example: array =
+     * [1,2,3,0,0,0,0,0,0,0] remove(2) would remove the item 2 But how do you
+     * remove the item from an array? Well, the way to remove it is to move all
+     * the items, that are to the right of the removed item, to the left So, the
+     * new array looks like this. array = [1,3,0,0,0,0,0,0,0,0] The method
+     * returns void (nothing)
+     *
+     * @param      index  The index
+     **/
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -154,17 +146,23 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-    if (index >= 0 && index <= size - 1 ) {
-        for(int i = index; i < size - 1; i++) {
-            arr[i]=arr[i + 1];
+    if (index >= 0 && index <= size - 1) {
+        for (int i = index; i < size - 1; i++) {
+            arr[i] = arr[i + 1];
         }
         arr[size] = 0;
         size--;
-    }
-    else {
+    } else {
         System.out.println("Invalid Position Exception");
     }
 }
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
+     **/
     public int get(final int index) {
         // Replace the code below to write the code for get
         // int x = 0;
