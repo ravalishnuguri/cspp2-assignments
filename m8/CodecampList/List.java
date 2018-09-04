@@ -175,7 +175,7 @@ public class List {
         // }
         // return -1;
         if (index >=0 && index < size) {
-            return arr[index]
+            return arr[index];
         }
         return -1;
     }
