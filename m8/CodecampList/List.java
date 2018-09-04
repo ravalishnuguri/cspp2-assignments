@@ -182,48 +182,45 @@ public class List {
         return -1;
     }
 
-    /*
-     * What happens when you print an object using println?
-     * Java provides a method named toString that is internally
-     * invoked when an object variable is used in println.
-     * For example:
-     * List l = new List();
-     * System.out.println(l);
-     * This statement is a shortcut for
-     * System.out.println(l.toString());
-     * 
-     * So, implement the toString method to display the items
-     * in the list in the square brackets notation.
-     * i.e., if the list has numbers 1, 2, 3
-     * return the string [1,2,3]
-     * Caution: The array may be having other elements
-     * Example: [1,2,3,0,0,0,0,0,0,0]
-     * toString should only return the items in the list and
-     * not all the elements of the array.
+    /**
+     * What happens when you print an object using println? Java provides a
+     * method named toString that is internally invoked when an object variable
+     * is used in println. For example: List l = new List();
+     * System.out.println(l); This statement is a shortcut for
+     * System.out.println(l.toString()); So, implement the toString method to
+     * display the items in the list in the square brackets notation. i.e., if
+     * the list has numbers 1, 2, 3 return the string [1,2,3] Caution: The array
+     * may be having other elements Example: [1,2,3,0,0,0,0,0,0,0] toString
+     * should only return the items in the list and not all the elements of the
+     * array.
      *
-     */
+     * @return     String representation of the object.
+     **/
     public String toString() {
         // Replace the code below
         // int[] newarr = Arrays.toString(arr)
         // System.out.println(Arrays.toString(arr));
         // return "print the list";
         String res = "[";
-        for (int i = 0; i < size - 1;i++) {
+        for (int i = 0; i < size - 1; i++) {
             res = res + arr[i] + ",";
         }
         res += arr[size - 1] + "]";
         return res;
-    }    
-    /*
-     * Contains return true if the list has
-     * the item passed as an argument to the method
-     * So, iterate through the list and return true if
-     * the item exists and otherwise false
-     */
+    }
+    /**
+     * Contains return true if the list has the item passed as an argument to
+     * the method So, iterate through the list and return true if the item
+     * exists and otherwise false
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     **/
     public boolean contains(final int item) {
         // Replace the code below
         int count = 0;
-        for (int i = 0; i< size; i++) {
+        for (int i = 0; i < size; i++) {
             if (arr[i] == item) {
                 count++;
             }
@@ -234,11 +231,14 @@ public class List {
         return false;
     }
 
-    /*
-     * Returns the index of the first occurrence
-     * of the specified element in this list,
-     * or -1 if this list does not contain the element.
-     */
+    /**
+     * Returns the index of the first occurrence of the specified element in
+     * this list, or -1 if this list does not contain the element.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     **/
     public int indexOf(final int item) {
         // Replace the code below
         int x = 0;
