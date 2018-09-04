@@ -209,9 +209,9 @@ public class List {
         return res;
     }
     /**
-     * Contains return true if the list has the item passed as an argument to
-     * the method So, iterate through the list and return true if the item
-     * exists and otherwise false
+     * Contains return true if the list has the item passed as an argument to.
+     * the method So, iterate through the list and return true if the item.
+     * exists and otherwise false.
      *
      * @param      item  The item
      *
@@ -303,6 +303,8 @@ public class List {
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                default:
                 break;
             }
         }
