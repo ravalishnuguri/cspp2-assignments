@@ -92,8 +92,8 @@ public class List {
     public void add(int item) {
         //Inserts the specified element at the end of the list.
         // arr = add(item, size-1);
-        if (size<0) {
-            arr[size+1] = item;
+        if (size < 0) {
+            arr[size + 1] = item;
         }
         else {
             arr[size] = item;
@@ -150,9 +150,9 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-    if (index >= 0 && index<=size-1 ) {
-        for(int i = index; i<size-1; i++) {
-            arr[i]=arr[i+1];
+    if (index >= 0 && index <= size - 1 ) {
+        for(int i = index; i < size - 1; i++) {
+            arr[i]=arr[i + 1];
         }
         arr[size] = 0;
         size--;
@@ -174,7 +174,7 @@ public class List {
         //     return x;
         // }
         // return -1;
-        if (index >=0 && index <= size) {
+        if (index >= 0 && index <= size) {
             return arr[index];
         }
         return -1;
@@ -206,10 +206,10 @@ public class List {
         // System.out.println(Arrays.toString(arr));
         // return "print the list";
         String res = "[";
-        for (int i = 0; i< size-1;i++) {
+        for (int i = 0; i < size - 1;i++) {
             res = res + arr[i] + ",";
         }
-        res += arr[size-1] + "]";
+        res += arr[size - 1] + "]";
         return res;
     } 
     
@@ -226,7 +226,7 @@ public class List {
             if (arr[i] == item) 
                 count++;
         }
-        if (count==1) {
+        if (count == 1) {
             return true;
         }
         return false;
@@ -239,15 +239,15 @@ public class List {
      */
     public int indexOf(int item) {
         // Replace the code below
-        int x=0;
+        int x = 0;
         int count = 0;
         for (int i = 0; i < size; i++) {
-            if(arr[i]==item) {
+            if(arr[i] == item) {
                 x = i;
                 count++;
             }
         }
-        if (count==1) {
+        if (count == 1) {
             return x;
         }
         return -1;
@@ -290,7 +290,7 @@ public class List {
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
                 case "get":
-                if (l.get(Integer.parseInt(tokens[1]))!= -1)
+                if (l.get(Integer.parseInt(tokens[1])) != -1)
                     System.out.println(l.get(Integer.parseInt(tokens[1])));
                 break;
                 case "contains":
