@@ -1,6 +1,5 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.util.Arrays;
 /**
  * List of array.
  */
@@ -32,11 +31,9 @@ public class List {
      * declaring a integer array.
      */
     private int[] arr;
-    
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-
     /*
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
@@ -54,7 +51,7 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
     /**
      * declaring a integer.
@@ -65,28 +62,26 @@ public class List {
     // again, don't initialize it here
     // variable initialization should be done in the constructor
 
-    /*
-     * The purpose of the constructor is to initialize the
-     * class variables with some default values.
-     */
+    /**
+     * The purpose of the constructor is to initialize the class variables with
+     * some default values.
+     **/
     public List() {
-
-
-        // what are the two variables to be initialized here?
-        // think about the private variables described above.
-        // What should be the default values?
-        // In the case of the list, it should be empty but
-        // it should be initialized with an array size like 10
+        /** init method for list.
+        **/
+        // what are the two variables to be initialized here? think about the
+        // private variables described above. What should be the default values?
+        // In the case of the list, it should be empty but it should be
+        // initialized with an array size like 10
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        arr = new int[10];
+        final int length = 10;
+        arr = new int[length];
         size = 0;
-
     }
-    
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -98,7 +93,7 @@ public class List {
      * 
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         // arr = add(item, size-1);
         if (size < 0) {
@@ -220,8 +215,7 @@ public class List {
         }
         res += arr[size - 1] + "]";
         return res;
-    } 
-    
+    }    
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -232,8 +226,9 @@ public class List {
         // Replace the code below
         int count = 0;
         for (int i = 0; i< size; i++) {
-            if (arr[i] == item)
+            if (arr[i] == item) {
                 count++;
+            }
         }
         if (count == 1) {
             return true;
@@ -251,7 +246,7 @@ public class List {
         int x = 0;
         int count = 0;
         for (int i = 0; i < size; i++) {
-            if(arr[i] == item) {
+            if (arr[i] == item) {
                 x = i;
                 count++;
             }
