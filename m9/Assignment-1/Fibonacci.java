@@ -37,8 +37,8 @@ public class Fibonacci
             c = a + b;
             a = b;
             b = c;
+            obj.add(b);
         }
-        obj.add(b);
     	return obj;
     }
 
