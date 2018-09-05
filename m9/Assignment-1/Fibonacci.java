@@ -30,8 +30,8 @@ public class Fibonacci
         // todo - complete this method
         List obj = new List();
         int a = 0, b = 1, c;
-        if (n == 0)
-            obj.add(a);
+        obj.add(a);
+        obj.add(b);
         for (int i = 2; i <= n; i++)
         {
             c = a + b;
