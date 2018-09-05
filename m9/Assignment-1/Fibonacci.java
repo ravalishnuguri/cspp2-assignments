@@ -40,7 +40,7 @@ final class Fibonacci {
         int a = 0, b = 1, c;
         obj.add(a);
         obj.add(b);
-        if (n==0) {
+        if (n == 0) {
             obj.add(a);
         }
         for (int i = 2; i < n; i++) {
@@ -63,3 +63,4 @@ final class Fibonacci {
         System.out.println(fib(n));
     }
 }
+
