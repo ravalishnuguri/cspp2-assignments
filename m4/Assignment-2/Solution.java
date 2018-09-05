@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 /** import for taking input.
 **/
 final class Solution {
