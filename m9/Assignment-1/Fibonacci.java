@@ -39,10 +39,10 @@ public class Fibonacci
             b = c;
             obj.add(b);
         }
-    	return obj;
+        return obj;
     }
 
-	public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(fib(n));
