@@ -11,9 +11,9 @@ class Student {
     /**
      * Constructs the object.
      *
-     * @param      name  The name
+     * @param      name1  The name
      **/
-    public Student(final String name1) {
+    Student(final String name1) {
     //A constructor used to initialize the instance variables
         this.name = name1;
     }
@@ -27,6 +27,11 @@ class Student {
     //Getter method which returns the value of instance variable
         return this.name;
     }
+    /**
+     * function_description.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int hashCode() {
         return 0;
     }
