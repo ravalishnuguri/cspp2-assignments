@@ -154,12 +154,11 @@ public class StringList implements StringListInterface{
         for (int i = size; i < len; i++) {
             if (size == list.length) {
             resize();
-        } else {
-            list[i] = items[temp];
-            temp += 1;
         }
+        list[i] = items[temp];
+        temp += 1;
+        size += 1;
         }
-        size = len;
 	}
     /*
      * The size method returns the value of the size.
