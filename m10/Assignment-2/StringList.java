@@ -149,17 +149,18 @@ public class StringList implements StringListInterface{
     array to the end of list*/
    
     public void addAll(String[] items) {
-		int len = items.length + size;
-        int temp = 0;
+		
         if (size == list.length) {
             resize();
         } else {
+        int len = items.length + size;
+        int temp = 0;
         for (int i = size; i < len; i++) {
             list[i] = items[temp];
             temp += 1;
         }
-    }
         size = len;
+    }
 	}
     /*
      * The size method returns the value of the size.
