@@ -151,10 +151,14 @@ public class StringList implements StringListInterface{
     public void addAll(String[] items) {
 		int len = items.length + size;
         int temp = 0;
+        if (size == list.length) {
+            resize();
+        } else {
         for (int i = size; i < len; i++) {
             list[i] = items[temp];
             temp += 1;
         }
+    }
         size = len;
 	}
     /*
