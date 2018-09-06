@@ -38,11 +38,17 @@ public class List<E> {
     public void add(E item) {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
+        if (size == list.length) {
+            resize();
+        }
         list[(size++)] = item;
     }
     /*Inserts all the elements of specified int 
     array to the end of list*/
     public void addAll(E[] items) {
+        for (E i:items) {
+            add(i);
+        }
         //Write logic for addAll method
     }
     /*
@@ -55,6 +61,16 @@ public class List<E> {
     public int size() {
         return size;
     }
+
+
+
+    private void resize() {
+        int cap = 2 * size;
+        // int[] arr = new int[cap];
+        list = Arrays.copyOf(list, cap);
+        // return arr;
+    }
+
     /*
      * The remove method does what the name suggests.
      * Removes a String item, specified by the index argument, from the list
@@ -75,8 +91,16 @@ public class List<E> {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int idex) {
+    public void remove(int index) {
         //Write logic for remove method
+        if (index >= 0 && index < size) {
+        for (int i = index; i < size - 1; i++) {
+            list[i] = list[i + 1];
+        }
+        size--;
+    } else {
+        System.out.println("Invalid Position Exception");
+    }       
     }
     /*
      * Get method has to return the items that is
@@ -91,7 +115,10 @@ public class List<E> {
      */
     public E get(int index) {
          //Write logic for get method
-        return list[index];
+        if (index >= 0 && index < size) {
+            return list[index];
+        }
+        return null;
     }
     /*
      * What happens when you print an object using println?
@@ -115,7 +142,15 @@ public class List<E> {
      */
     public String toString() {
        
-       return "print the list";
+       if (size == 0) {
+            return "[]";
+        }
+       String res = "[";
+        for (int i = 0; i < size - 1; i++) {
+            res = res + list[i] + ",";
+        }
+        res += list[size - 1] + "]";
+        return res;
     }
     /*
      * Contains return true if the list has
@@ -125,7 +160,11 @@ public class List<E> {
      */
     public boolean contains(E item) {
 		//Write logic for contains method
-        return true;
+        int res = indexOf(item);
+        if (res >= 0) {
+            return true;
+        }
+        return false;
     }
     /*
      * Returns the index of the first occurrence 
@@ -134,6 +173,11 @@ public class List<E> {
      */
     public int indexOf(E item) {
        //Write logic for indexOf method
+        for (int i = 0; i<size;i++) {
+            if (list[i].equals(item)) {
+                return i;
+            }
+        }
         return -1;
     }
 }
