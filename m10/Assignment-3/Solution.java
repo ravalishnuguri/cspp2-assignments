@@ -219,13 +219,13 @@ final class Solution {
                         listFloat.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listFloat.indexOf(Float.parseFloat(tokens[1])));
+            System.out.println(listFloat.indexOf(Float.parseFloat(tokens[1])));
                         break;
                         case "get":
-                        System.out.println(listFloat.get(Integer.parseInt(tokens[1])));
+            System.out.println(listFloat.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listFloat.contains(Float.parseFloat(tokens[1])));
+            System.out.println(listFloat.contains(Float.parseFloat(tokens[1])));
                         break;
                         default:
                         break;
@@ -240,7 +240,8 @@ final class Solution {
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
+                    // based on the list operation invoke the
+                    //corresponding method
                     switch (tokens[0]) {
                         case "add":
                             listCharacter.add(tokens[1].charAt(0));
@@ -272,13 +273,13 @@ final class Solution {
                         listCharacter.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listCharacter.indexOf(tokens[1].charAt(0)));
+            System.out.println(listCharacter.indexOf(tokens[1].charAt(0)));
                         break;
                         case "get":
-                        System.out.println(listCharacter.get(Integer.parseInt(tokens[1])));
+            System.out.println(listCharacter.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listCharacter.contains(tokens[1].charAt(0)));
+            System.out.println(listCharacter.contains(tokens[1].charAt(0)));
                         break;
                         default:
                         break;
@@ -293,7 +294,8 @@ final class Solution {
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
+                    // based on the list operation invoke the
+                    //corresponding method
                     switch (tokens[0]) {
                         case "add":
                             listDouble.add(Double.parseDouble(tokens[1]));
@@ -315,7 +317,6 @@ final class Solution {
                         System.out.println(listDouble.size());
                         break;
                         case "print":
-                        // print the list (implement toString in StringList class
                         //for this to work)
                         // expected format is [item-1,item-2,...,item-n]
                         // review the output testcase file
@@ -325,13 +326,13 @@ final class Solution {
                         listDouble.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listDouble.indexOf(Double.parseDouble(tokens[1])));
+            System.out.println(listDouble.indexOf(Double.parseDouble(tokens[1])));
                         break;
                         case "get":
-                        System.out.println(listDouble.get(Integer.parseInt(tokens[1])));
+            System.out.println(listDouble.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listDouble.contains(Double.parseDouble(tokens[1])));
+            System.out.println(listDouble.contains(Double.parseDouble(tokens[1])));
                         break;
                         default:
                         break;
@@ -339,14 +340,16 @@ final class Solution {
                 }
             break;
 
-            case "O"://This case will be executed for Student type list i.e to store List of Student Objects
+            case "O":
+            //This case will be executed for Student type list.
                 List<Student> listStudent = new List();
                 while (stdin.hasNext()) {
                     // read the line
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
+                    // based on the list operation invoke the
+                    //corresponding method
                     switch (tokens[0]) {
                         case "add":
                             listStudent.add(new Student(tokens[1]));
@@ -378,13 +381,13 @@ final class Solution {
                         listStudent.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listStudent.indexOf(new Student(tokens[1])));
+            System.out.println(listStudent.indexOf(new Student(tokens[1])));
                         break;
                         case "get":
-                        System.out.println(listStudent.get(Integer.parseInt(tokens[1])));
+            System.out.println(listStudent.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listStudent.contains(new Student(tokens[1])));
+            System.out.println(listStudent.contains(new Student(tokens[1])));
                         break;
                         default:
                         break;
