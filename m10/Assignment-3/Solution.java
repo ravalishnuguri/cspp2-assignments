@@ -13,9 +13,9 @@ class Student {
      *
      * @param      name  The name
      **/
-    public Student(final String name) {
+    public Student(final String name1) {
     //A constructor used to initialize the instance variables
-        this.name = name;
+        this.name = name1;
     }
 
     /**
@@ -26,6 +26,9 @@ class Student {
     public String getName() {
     //Getter method which returns the value of instance variable
         return this.name;
+    }
+    public int hashCode() {
+        return 0;
     }
 
     /**
