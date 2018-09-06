@@ -246,6 +246,9 @@ public class StringList implements StringListInterface{
      *
      */
     public String toString() {
+        if (size == 0) {
+            return "[]";
+        }
        String res = "[";
         for (int i = 0; i < size - 1; i++) {
             res = res + list[i] + ",";
