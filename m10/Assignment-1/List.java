@@ -300,8 +300,8 @@ public class List {
     }
 
      /**
-     * Inserts the specified element at the specified index by moving all the
-     * elements to the right. The method returns void (nothing)
+     * Inserts the specified element at the specified index by moving all the.
+     * elements to the right. The method returns void (nothing).
      *
      * @param      index  The index
      *  @param      item   The item
@@ -313,16 +313,14 @@ public class List {
         list[index] = item;
         size += 1;
     }
-    
     /**
-     * Returns the count of occurances of a given item in the list
+     * Returns the count of occurances of a given item in the list.
      *
-     * @param      item  The item
+     * @param      item  The item.
      *
      * @return     { description_of_the_return_value }
      **/
-    public int count(final int item)
-    {
+    public int count(final int item) {
         int count = 0;
         for (int j = 0; j < size; j++) {
             if (item == list[j]) {
@@ -335,9 +333,9 @@ public class List {
 
 
 	/**
-     * { function_description }
+     * function_description.
      *
-     * @param      args  The arguments
+     * @param      args  The arguments.
      **/
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
@@ -354,12 +352,11 @@ public class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                case "add":
-                if ((tokens.length)==2) {
+                if ((tokens.length) == 2) {
                 String[] t = tokens[1].split(",");
                 if (t.length == 1) {
                     l.add(Integer.parseInt(tokens[1]));
-                }
-                else{
+                } else {
                     if (t.length > 1)
                         l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
                     }
@@ -369,11 +366,12 @@ public class List {
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
                 case "addAll":
-                if (tokens.length == 2){
+                if (tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
                 int temp[] = new int[t1.length];
-                for (int i = 0; i < temp.length; i++)
+                for (int i = 0; i < temp.length; i++) {
                     temp[i] = Integer.parseInt(t1[i]);
+                }
                 l.addAll(temp);
                 }
                 break;
