@@ -114,7 +114,7 @@ final class Solution {
                         System.out.println(listString.indexOf(tokens[1]));
                         break;
                         case "get":
-                        System.out.println(listString.get(Integer.parseInt(tokens[1])));
+            System.out.println(listString.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
                         System.out.println(listString.contains(tokens[1]));
@@ -165,13 +165,13 @@ final class Solution {
                         listInteger.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listInteger.indexOf(Integer.parseInt((tokens[1]))));
+            System.out.println(listInteger.indexOf(Integer.parseInt((tokens[1]))));
                         break;
                         case "get":
-                        System.out.println(listInteger.get(Integer.parseInt(tokens[1])));
+            System.out.println(listInteger.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listInteger.contains(Integer.parseInt((tokens[1]))));
+            System.out.println(listInteger.contains(Integer.parseInt((tokens[1]))));
                         break;
                         default:
                         break;
@@ -186,7 +186,8 @@ final class Solution {
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
+                    // based on the list operation invoke the
+                    //corresponding method
                     switch (tokens[0]) {
                         case "add":
                             listFloat.add(Float.parseFloat(tokens[1]));
