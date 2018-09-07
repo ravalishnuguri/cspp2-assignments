@@ -12,11 +12,11 @@ class Student {
     /**
      * Constructs the object.
      *
-     * @param      name  The name
+     * @param      name1  The name
      **/
-    public Student(final String name) {
+    public Student(final String name1) {
     //A constructor used to initialize the instance variables
-        this.name = name;
+        this.name = name1;
     }
 
     /**
@@ -45,7 +45,7 @@ class Student {
      * @return     { description_of_the_return_value }
      **/
     @Override
-    public boolean equals(final Object other) { 
+    public boolean equals(final Object other) {
     //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
@@ -68,7 +68,7 @@ class Student {
 /**
  * Class for solution.
  */
-public class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
@@ -126,8 +126,8 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Integer[] temp = new Integer[t1.length];
-                        for(int i = 0; i < temp.length; i++) {
-                            temp[i]=Integer.parseInt(t1[i]);
+                        for (int i = 0; i < temp.length; i++) {
+                            temp[i] = Integer.parseInt(t1[i]);
                         }
                         l.addAll(temp);
                     }
@@ -136,16 +136,19 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         Integer[] a = new Integer[t2.length];
-                        for(int i = 0; i < t2.length; i++)
+                        for (int i = 0; i < t2.length; i++) {
                             a[i] = Integer.parseInt(t2[i]);
+                        }
                         l.removeAll(a);
                     }
                 break;
-                case "subList": {
-                    if (tokens.length != 2) break;
+                case "subList":
+                    if (tokens.length != 2) {
+                        break;
+                    }
                     String[] arrstring3 = tokens[1].split(",");
 List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
-                    if (object != null) 
+                    if (object != null) {
                         System.out.println(object);
                     break;
                 }
@@ -165,7 +168,7 @@ List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstr
                 default:
                 break;
             }
-        }   
+        }
     }
     /**
      * function_description.
@@ -219,7 +222,7 @@ List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstr
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Double[] temp = new Double[t1.length];
-                        for(int i = 0; i < temp.length; i++) {
+                        for (int i = 0; i < temp.length; i++) {
                             temp[i] = Double.parseDouble(t1[i]);
                         }
                         l.addAll(temp);
@@ -229,8 +232,9 @@ List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstr
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         Double[] a = new Double[t2.length];
-                        for(int i = 0; i < t2.length; i++)
+                        for (int i = 0; i < t2.length; i++) {
                             a[i] = Double.parseDouble(t2[i]);
+                        }
                         l.removeAll(a);
                     }
                 break;
@@ -240,8 +244,9 @@ List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstr
                     }
                     String[] arrstring3 = tokens[1].split(",");
 List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
-                    if (object != null) 
+                    if (object != null) {
                         System.out.println(object);
+                    }
                     break;
                 case "equals":
                     if (tokens.length == 2) {
@@ -323,8 +328,9 @@ List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstr
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         Float[] a = new Float[t2.length];
-                        for (int i = 0; i < t2.length; i++)
+                        for (int i = 0; i < t2.length; i++) {
                             a[i] = Float.parseFloat(t2[i]);
+                        }
                         l.removeAll(a);
                     }
                 break;
@@ -342,7 +348,7 @@ List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstr
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
                         List l2 = new List();
-                        for (int k = 0; k < lt.length; k++ ) {
+                        for (int k = 0; k < lt.length; k++) {
                             l2.add(Float.parseFloat(lt[k]));
                         }
                         System.out.println(l.equals(l2));
@@ -423,8 +429,9 @@ List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstr
                     }
                     String[] arrstring3 = tokens[1].split(",");
 List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
-                    if (object != null)
+                    if (object != null) {
                         System.out.println(object);
+                    }
                     break;
                 case "equals":
                     if (tokens.length == 2) {
@@ -514,7 +521,9 @@ List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstr
                     }
                 break;
                 case "subList":
-                    if (tokens.length != 2) break;
+                    if (tokens.length != 2) {
+                        break;
+                    }
                     String[] arrstring3 = tokens[1].split(",");
 List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
                     if (object != null) {
