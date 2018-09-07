@@ -271,7 +271,7 @@ public class List {
     */
     public boolean equals(List otherlist ) {
     // Replace the code below
-    return this.toString()!=(otherlist.toString());
+    return this.toString().equals(otherlist.toString());
     }
     /*
     * Removes all the elements from list
