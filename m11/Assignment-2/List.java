@@ -206,16 +206,31 @@ public class List<E> {
      */
     public List subList(int start, int end) {
 
-        if ((start <= 0 || end >= size) || end < 0) {
+        if (start < 0) {
         System.out.println("Index Out of Bounds Exception");
          return null;
-     } else {
-        List list1 = new List();
+        }
+        if (end < 0) {
+        System.out.println("Index Out of Bounds Exception");
+         return null;
+        }
+        if (end > size()) {
+        System.out.println("Index Out of Bounds Exception");
+         return null;
+        }
+        if (start == end) {
+        System.out.println("Index Out of Bounds Exception");
+         return null;
+        }
+        if (start > end) {
+        System.out.println("Index Out of Bounds Exception");
+         return null;
+        }
+        List<E> list1 = new List();
         for (int i = start; i < end; i++) {
-            list1.add(list[i]);
+            list1.add(this.get(i));
         }
         return list1;
-     }
     }
     /*Returns a boolean indicating whether the parameter
       i.e a List object is exactly matching with the given list or not.
