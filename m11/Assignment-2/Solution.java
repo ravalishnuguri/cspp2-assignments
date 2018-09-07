@@ -7,7 +7,6 @@ final class Student {
     /**
      * Constructs the object.
      */
-    private Student() { }
     /**
      * var_description.
      */
@@ -73,6 +72,10 @@ final class Student {
  * Class for solution.
  **/
 public class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() { }
 
     /**
      * function_description.
@@ -240,7 +243,9 @@ public class Solution {
                     }
                 break;
                 case "subList":
-                    if (tokens.length != 2) break;
+                    if (tokens.length != 2) {
+                        break;
+                    }
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
                         Integer.parseInt(arrstring3[1]));
@@ -335,7 +340,9 @@ public class Solution {
                     }
                 break;
                 case "subList":
-                    if (tokens.length != 2) break;
+                    if (tokens.length != 2) {
+                        break;
+                    }
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
                         Integer.parseInt(arrstring3[1]));
