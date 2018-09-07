@@ -17,7 +17,7 @@ final class Student {
      *
      * @param      name1  The name 1
      **/
-    public Student(final String name1) {
+    Student(final String name1) {
     //A constructor used to initialize the instance variables
         this.name = name1;
     }
@@ -71,7 +71,7 @@ final class Student {
 /**
  * Class for solution.
  **/
-public class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
