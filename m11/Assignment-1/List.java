@@ -1,7 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-import java.util.ArrayList;
 
 /**
  * List of .
@@ -262,7 +261,6 @@ public class List {
      @param      newArray  The new array
     **/
      public void removeAll(final int[] newArray) {
-        // write the logic 
         for (int i = 0; i < newArray.length; i++) {
             for (int j = 0; j < size; j++) {
                 if (newArray[i] == list[j]) {
