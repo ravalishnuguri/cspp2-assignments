@@ -21,6 +21,12 @@ class Set {
     	set = new int[cap];
     	size = 0;
     }
+    public Set(int[] elements) {
+    this.set = new int[elements.length];
+    for (int pos = 0; pos < elements.length; pos++) {
+        this.set[pos] = elements[pos];
+    }
+}
     private void resize() {
         int cap = 2 * size;
         set = Arrays.copyOf(set, cap);
@@ -68,19 +74,36 @@ class Set {
         return res;
     }
     public void add(int[] item) {
-    	int len = set.length + size;
-        int temp = 0;
-        for (int i = size; i < len; i++) {
-            if (size == set.length) {
-            resize();
+    	// int len = set.length + size;
+     //    int temp = 0;
+     //    for (int i = size; i < len; i++) {
+     //        if (size == set.length) {
+     //        resize();
+     //    }
+     //    set[i] = item[temp];
+     //    temp += 1;
+     //    size += 1;
+     //    }
+    	for (int i:item) {
+            add(i);
+    }
+    }
+    public Set intersection(Set a) {
+    	int members = 0;
+    	for (int i = 0; i < set.length; i++) {
+        if (a.contains(set[i])) {
+            members++;
         }
-        set[i] = item[temp];
-        temp += 1;
-        size += 1;
+    	}
+
+    	int[] newMembers = new int[members];
+    	int position = 0;
+    	for (int i = 0; i < set.length; i++) {
+        if (a.contains(set[i])) {
+            newMembers[position++] = this.set[i];
         }
     }
-    public Set intersection(Set item) {
-    	return null;
+    return new Set(newMembers);
     }
     public Set retainAll(int[] item) {
     	return null;
