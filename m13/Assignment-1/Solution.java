@@ -68,9 +68,16 @@ class Set {
         return res;
     }
     public void add(int[] item) {
-    	for(int i:item) {
-    		add(item);
-    	}
+    	int len = set.length + size;
+        int temp = 0;
+        for (int i = size; i < len; i++) {
+            if (size == set.length) {
+            resize();
+        }
+        set[i] = item[temp];
+        temp += 1;
+        size += 1;
+        }
     }
     public Set intersection(Set item) {
     	return null;
