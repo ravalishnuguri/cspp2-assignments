@@ -4,53 +4,95 @@ import java.util.Arrays;
 
 /**
  * Class for set.
- * @author : 
+ * @author : 20186069.
  */
 class Set {
     //your code goes here...
     //Good luck :-)
+    /**
+    declaring an int array
+    **/
     private int[] set;
+    /**
+     * var_description.
+     **/
     private int size;
+    /**
+     * Constructs the object.
+     **/
 
-
+    /**
+     * Constructs the object.
+     **/
     public Set() {
-    	set = new int[10];
-    	size = 0;
+        final int num = 10;
+        set = new int[num];
+        size = 0;
     }
-    public Set(int cap) {
-    	set = new int[cap];
-    	size = 0;
+    /**
+     * Constructs the object.
+     *
+     * @param      cap   The capability
+     **/
+    public Set(final int cap) {
+        set = new int[cap];
+        size = 0;
     }
-    public Set(int[] elements) {
+    /**
+     * Constructs the object.
+     *
+     * @param      elements  The elements
+     **/
+    public Set(final int[] elements) {
     this.set = new int[elements.length];
     for (int pos = 0; pos < elements.length; pos++) {
         this.set[pos] = elements[pos];
     }
 }
+    /**
+     * function_description.
+     **/
     private void resize() {
         int cap = 2 * size;
         set = Arrays.copyOf(set, cap);
     }
 
-    public void add(int item) {
-    	int flag = 0;
-    	if (size == set.length) {
+    /**
+     * function_description.
+     *
+     * @param      item  The item
+     **/
+    public void add(final int item) {
+        int flag = 0;
+        if (size == set.length) {
             resize();
         }
         if (contains(item) == true) {
-        	flag = 0;
+            flag = 0;
         } else {
-        	set[size++] = item;
+            set[size++] = item;
         }
-    	
+        
     }
 
+    /**
+     * function_description.
+     *
+     * @return     { description_of_the_return_value }
+     **/
     public int size() {
-    	return size;
+        return size;
     }
-    public boolean contains(int item) {
-    	// return true;
-    	int count = 0;
+    /**
+     * function_description.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     **/
+    public boolean contains(final int item) {
+        // return true;
+        int count = 0;
         for (int i = 0; i < size; i++) {
             if (set[i] == item) {
                 count++;
@@ -61,9 +103,14 @@ class Set {
         }
         return false;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     **/
     public String toString() {
-    	// return "string";
-    	if (size == 0) {
+        // return "string";
+        if (size == 0) {
             return "{}";
         }
        String res = "{";
@@ -73,8 +120,13 @@ class Set {
         res += set[size - 1] + "}";
         return res;
     }
-    public void add(int[] item) {
-    	// int len = set.length + size;
+    /**
+     * function_description.
+     *
+     * @param      item  The item
+     */
+    public void add(final int[] item) {
+        // int len = set.length + size;
      //    int temp = 0;
      //    for (int i = size; i < len; i++) {
      //        if (size == set.length) {
@@ -84,32 +136,53 @@ class Set {
      //    temp += 1;
      //    size += 1;
      //    }
-    	for (int i:item) {
+        for (int i:item) {
             add(i);
     }
     }
-    public Set intersection(Set a) {
-    	int members = 0;
-    	for (int i = 0; i < set.length; i++) {
+    /**
+     * function_description.
+     *
+     * @param      a     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     **/
+    public Set intersection(final Set a) {
+        int members = 0;
+        for (int i = 0; i < set.length; i++) {
         if (a.contains(set[i])) {
             members++;
         }
-    	}
+        }
 
-    	int[] newMembers = new int[members];
-    	int position = 0;
-    	for (int i = 0; i < set.length; i++) {
+        int[] newMembers = new int[members];
+        int position = 0;
+        for (int i = 0; i < set.length; i++) {
         if (a.contains(set[i])) {
             newMembers[position++] = this.set[i];
         }
     }
     return new Set(newMembers);
     }
-    public Set retainAll(int[] item) {
-    	return null;
+    /**
+     * function_description.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public Set retainAll(final int[] item) {
+        return null;
     }
-    public int[][] cartesianProduct(Set item) {
-    	return null;
+    /**
+     * function_description.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int[][] cartesianProduct(final Set item) {
+        return null;
     }
     
 }
