@@ -184,7 +184,7 @@ class Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public Set retainAll(final int[] a) {
+    public String retainAll(final int[] a) {
         // return null;
         // int members = 0;
         // for (int i = 0; i < set.length; i++) {
@@ -219,18 +219,18 @@ class Set {
             }
         }
     }
-    // int n = newMembers.length;
-    // if (n == 0) {
-    //     System.out.print("{}");
-    // } else {
-    //     System.out.print("{");
-    //     for (int p = 0; p < n - 1; p++) {
-    //         System.out.print(newMembers[p] + ", ");
-    //     }
-    //     System.out.print(newMembers[n - 1] + "}");
-    // }
+    int n = newMembers.length;
+    if (n == 0) {
+        System.out.print("{}");
+    } else {
+        System.out.print("{");
+        for (int p = 0; p < n - 1; p++) {
+            System.out.print(newMembers[p] + ", ");
+        }
+        System.out.print(newMembers[n - 1] + "}");
+    }
     // return new Set(newMembers);
-        return new Set(newMembers);
+        return "";
 
     }
     /**
