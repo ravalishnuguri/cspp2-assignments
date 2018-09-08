@@ -43,12 +43,12 @@ class Set {
      *
      * @param      elements  The elements
      **/
-//     Set(final int[] elements) {
-//     this.set = new int[elements.length];
-//     for (int pos = 0; pos < elements.length; pos++) {
-//         this.set[pos] = elements[pos];
-//     }
-// }
+    Set(final int[] elements) {
+    this.set = new int[elements.length];
+    for (int pos = 0; pos < elements.length; pos++) {
+        this.set[pos] = elements[pos];
+    }
+}
     /**
      * function_description.
      **/
@@ -185,7 +185,53 @@ class Set {
      * @return     { description_of_the_return_value }
      */
     public Set retainAll(final int[] a) {
-        return null;
+        // return null;
+        // int members = 0;
+        // for (int i = 0; i < set.length; i++) {
+        //     int x = 0;
+        //     x = set[i];
+        // if (a.contains(x)) {
+        //     members++;
+        // }
+        // }
+        // System.out.println(members);
+        int count = 0;
+        for (int i = 0; i < set.length; i++) {
+        for (int j = 0; j < a.length; j++) {
+            if(set[i] == a[j]) {
+                count++;
+            }
+        }
+    }
+        int[] newMembers = new int[count];
+        int position = 0;
+        // for (int i = 0; i < set.length; i++) {
+        // if (a.contains(set[i])) {
+        //     // System.out.println(set[i]);
+        //     // x = set[i];
+        //     newMembers[position++] = set[i];
+        // }
+    // }
+    for (int i = 0; i < set.length; i++) {
+        for (int j = 0; j < a.length; j++) {
+            if(set[i] == a[j]) {
+                newMembers[position++] = set[i];
+            }
+        }
+    }
+    // int n = newMembers.length;
+    // if (n == 0) {
+    //     System.out.print("{}");
+    // } else {
+    //     System.out.print("{");
+    //     for (int p = 0; p < n - 1; p++) {
+    //         System.out.print(newMembers[p] + ", ");
+    //     }
+    //     System.out.print(newMembers[n - 1] + "}");
+    // }
+    // return new Set(newMembers);
+        return new Set(newMembers);
+
     }
     /**
      * function_description.
