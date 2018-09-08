@@ -43,12 +43,12 @@ class Set {
      *
      * @param      elements  The elements
      **/
-    Set(final int[] elements) {
-    this.set = new int[elements.length];
-    for (int pos = 0; pos < elements.length; pos++) {
-        this.set[pos] = elements[pos];
-    }
-}
+//     Set(final int[] elements) {
+//     this.set = new int[elements.length];
+//     for (int pos = 0; pos < elements.length; pos++) {
+//         this.set[pos] = elements[pos];
+//     }
+// }
     /**
      * function_description.
      **/
@@ -180,11 +180,11 @@ class Set {
     /**
      * function_description.
      *
-     * @param      item  The item
+     * @param      a  The item
      *
      * @return     { description_of_the_return_value }
      */
-    public Set retainAll(final int[] item) {
+    public Set retainAll(final int[] a) {
         return null;
     }
     /**
