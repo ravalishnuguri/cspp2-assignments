@@ -214,7 +214,7 @@ class Set {
     // }
     for (int i = 0; i < set.length; i++) {
         for (int j = 0; j < a.length; j++) {
-            if(set[i] == a[j]) {
+            if (set[i] == a[j]) {
                 newMembers[position++] = set[i];
             }
         }
