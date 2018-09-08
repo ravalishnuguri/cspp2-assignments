@@ -164,11 +164,11 @@ class Set {
             newMembers[position++] = set[i];
         }
     }
-    System.out.print("{");
     int n = newMembers.length;
     if (n==0) {
         System.out.println("{}");
     } else {
+        System.out.print("{");
         for (int p = 0; p < n - 1; p++) {
             System.out.print(newMembers[p]+", ");
         }
