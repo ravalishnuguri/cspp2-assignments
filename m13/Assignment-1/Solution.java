@@ -165,14 +165,14 @@ class Set {
         }
     }
     int n = newMembers.length;
-    if (n==0) {
+    if (n == 0) {
         System.out.print("{}");
     } else {
         System.out.print("{");
         for (int p = 0; p < n - 1; p++) {
-            System.out.print(newMembers[p]+", ");
+            System.out.print(newMembers[p] + ", ");
         }
-        System.out.print(newMembers[n-1]+"}");
+        System.out.print(newMembers[n - 1] + "}");
     }
     // return new Set(newMembers);
         return "";
