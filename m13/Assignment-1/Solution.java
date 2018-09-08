@@ -198,7 +198,7 @@ class Set {
         int count = 0;
         for (int i = 0; i < set.length; i++) {
         for (int j = 0; j < a.length; j++) {
-            if(set[i] == a[j]) {
+            if (set[i] == a[j]) {
                 count++;
             }
         }
