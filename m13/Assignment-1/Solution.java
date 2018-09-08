@@ -146,22 +146,32 @@ class Set {
      *
      * @return     { description_of_the_return_value }
      **/
-    public Set intersection(final Set a) {
+    public String intersection(final Set a) {
         int members = 0;
+        int x = 0;
         for (int i = 0; i < set.length; i++) {
         if (a.contains(set[i])) {
             members++;
         }
         }
-
+        // System.out.println(members);
         int[] newMembers = new int[members];
         int position = 0;
         for (int i = 0; i < set.length; i++) {
         if (a.contains(set[i])) {
-            newMembers[position++] = this.set[i];
+            // System.out.println(set[i]);
+            x = set[i];
+            newMembers[position++] = set[i];
         }
     }
-    return new Set(newMembers);
+    System.out.print("{");
+    int n = newMembers.length;
+        for (int p = 0; p < n - 1; p++) {
+            System.out.print(newMembers[p]+", ");
+        }
+        System.out.print(newMembers[n-1]+"}");
+    // return new Set(newMembers);
+        return "";
     }
     /**
      * function_description.
