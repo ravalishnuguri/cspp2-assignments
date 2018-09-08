@@ -166,10 +166,14 @@ class Set {
     }
     System.out.print("{");
     int n = newMembers.length;
+    if (n==0) {
+        System.out.println("{}");
+    } else {
         for (int p = 0; p < n - 1; p++) {
             System.out.print(newMembers[p]+", ");
         }
         System.out.print(newMembers[n-1]+"}");
+    }
     // return new Set(newMembers);
         return "";
     }
