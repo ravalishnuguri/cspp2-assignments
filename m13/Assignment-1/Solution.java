@@ -8,9 +8,9 @@ import java.util.Arrays;
  */
 class Set {
     //your code goes here...
-    //Good luck :-)
+    //Good luck :-).
     /**
-    declaring an int array
+    declaring an int array.
     **/
     private int[] set;
     /**
@@ -24,7 +24,7 @@ class Set {
     /**
      * Constructs the object.
      **/
-    public Set() {
+    Set() {
         final int num = 10;
         set = new int[num];
         size = 0;
@@ -34,7 +34,7 @@ class Set {
      *
      * @param      cap   The capability
      **/
-    public Set(final int cap) {
+    Set(final int cap) {
         set = new int[cap];
         size = 0;
     }
@@ -43,7 +43,7 @@ class Set {
      *
      * @param      elements  The elements
      **/
-    public Set(final int[] elements) {
+    Set(final int[] elements) {
     this.set = new int[elements.length];
     for (int pos = 0; pos < elements.length; pos++) {
         this.set[pos] = elements[pos];
@@ -67,12 +67,11 @@ class Set {
         if (size == set.length) {
             resize();
         }
-        if (contains(item) == true) {
+        if (contains(item)) {
             flag = 0;
         } else {
             set[size++] = item;
         }
-        
     }
 
     /**
@@ -184,7 +183,6 @@ class Set {
     public int[][] cartesianProduct(final Set item) {
         return null;
     }
-    
 }
 /**
  * Solution class for code-eval.
