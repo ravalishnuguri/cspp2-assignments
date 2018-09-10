@@ -50,6 +50,11 @@ class Sortedset extends Set {
         }
         return Arrays.copyOf(result, count);
     }
+    /**
+     * function_description.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int last() {
         if (size == 0) {
             System.out.println("Set Empty Exception");
@@ -98,7 +103,7 @@ class Sortedset extends Set {
 /**
  * Class for solution.
  **/
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
