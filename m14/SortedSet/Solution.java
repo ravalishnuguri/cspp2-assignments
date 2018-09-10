@@ -90,6 +90,28 @@ class Solution {
             String[] tokens = line.split(" ");
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
+                case "subSet":
+                if (tokens.length != 2) {
+                    break;
+                }
+                String[] arrstring3 = tokens[1].split(",");
+                int[] object = s.subSet(Integer.parseInt(arrstring3[0]),
+                                        Integer.parseInt(arrstring3[1]));
+                if (object != null) {
+                    System.out.println(Arrays.toString(object).replace("[",
+                        "{").replace("]", "}"));
+                }
+                break;
+                case "headSet":
+                if (tokens.length != 2) {
+                    break;
+                }
+                int[] obj = s.headSet(Integer.parseInt(tokens[1]));
+                if (obj != null) {
+                    System.out.println(Arrays.toString(obj).replace("[",
+                        "{").replace("]", "}"));
+                }
+                break;
                 case "last":
                 if (tokens.length != 1) {
                     break;
@@ -105,27 +127,7 @@ class Solution {
                     s.add(intArr);
                 }
                 break;
-                case "headSet":
-                if (tokens.length != 2) {
-                    break;
-                }
-                int[] obj = s.headSet(Integer.parseInt(tokens[1]));
-                if (obj != null) {
-                    System.out.println(Arrays.toString(obj).replace("[",
-                        "{").replace("]", "}"));
-                }
-                break;
-                case "subSet":
-                if (tokens.length != 2) {
-                    break;
-                }
-                String[] arrstring3 = tokens[1].split(",");
-                int[] object = s.subSet(Integer.parseInt(arrstring3[0]),
-                                        Integer.parseInt(arrstring3[1]));
-                if (object != null) {
-                    System.out.println(Arrays.toString(object).replace("[",
-                        "{").replace("]", "}"));
-                }
+                default:
                 break;
             }
         }
