@@ -1,8 +1,19 @@
 import java.util.Scanner;
 import java.io.BufferedInputStream;
 import java.util.Arrays;
+/**
+ * Class for sortedset.
+ */
 class Sortedset extends Set {
-    public int[] subSet(int fromElement, int toElement) {
+    /**
+     * function_description.
+     *
+     * @param      fromElement  The from element
+     * @param      toElement    To element
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int[] subSet(final int fromElement, final int toElement) {
         if (fromElement > toElement) {
             System.out.println("Invalid Arguments to Subset Exception");
             return null;
@@ -21,7 +32,14 @@ class Sortedset extends Set {
         }
         return Arrays.copyOf(result, k);
     }
-    public int[] headSet(int toElement) {
+    /**
+     * function_description.
+     *
+     * @param      toElement  To element
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int[] headSet(final int toElement) {
         int[] result = new int[size];
         int count = 0;
         for (int i = 0; i < size; i++) {
@@ -39,11 +57,21 @@ class Sortedset extends Set {
         }
         return set[size - 1];
     }
-    public void addAll(int[] item) {
+    /**
+     * Adds all.
+     *
+     * @param      item  The item
+     **/
+    public void addAll(final int[] item) {
             for (int i:item) {
                 this.add(i);
         }
     }
+    /**
+     * .function_description.
+     *
+     * @param      arr   The arr
+     **/
     public void sort(final int[] arr) {
         int temp;
         for (int i = 0; i < size; i++) {
@@ -59,15 +87,29 @@ class Sortedset extends Set {
     /**
      * add method.
      * @param      item  The item
-     */
+     **/
     public void add(final int item) {
         if (!contains(item)) {
             set[size++] = item;
         }
         sort(set);
     }
-}    
+}
+/**
+ * Class for solution.
+ **/
 class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() { }
+    /**
+     * function_description.
+     *
+     * @param      s     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public static int[] intArray(final String s) {
         String input = s;
         if (input.equals("[]")) {
@@ -80,7 +122,12 @@ class Solution {
                .mapToInt(Integer::parseInt)
                .toArray();
     }
-    public static void main(String[] args) {
+    /**
+     * function_description.
+     *
+     * @param      args  The arguments
+     **/
+    public static void main(final String[] args) {
         Sortedset s = new Sortedset();
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
          while (stdin.hasNext()) {
