@@ -172,10 +172,6 @@ public class List {
         // } else {
         //     System.out.println("Invalid Position Exception");
         // }
-
-
-
-
         try {
             if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
