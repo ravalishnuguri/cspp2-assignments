@@ -90,13 +90,11 @@ class Sortedset extends Set {
             throw new SetEmptyException(""); 
             // return -1;
         }
-        // return set[size - 1];
+        return set[size - 1];
         } catch(SetEmptyException se) {
             System.out.println("Set Empty Exception");
         }
-        finally {
-            return set[size - 1];
-        }
+        return 0;
     }
     /**
      * Adds all.
