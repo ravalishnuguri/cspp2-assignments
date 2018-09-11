@@ -185,7 +185,7 @@ public class List {
         } else {
              throw new InvalidPositionException("");
         }
-    } catch(InvalidPositionException ip) {
+    } catch (InvalidPositionException ip) {
             System.out.println("Invalid Position Exception");
         }
     }
@@ -338,8 +338,7 @@ public class List {
         }
         return list1;
     }
-     }
-     catch(IndexOutOfBoundsException ib) {
+     } catch (IndexOutOfBoundsException ib) {
         System.out.println("Index Out of Bounds Exception");
      }
      return null;
