@@ -336,6 +336,24 @@ public class List {
      }
      return null;
     }
+
+    /**
+     * Returns the count of occurances of a given item in the list.
+     *
+     * @param      item  The item.
+     *
+     * @return     { description_of_the_return_value }
+     **/
+    public int count(final int item) {
+        int count = 0;
+        for (int j = 0; j < size; j++) {
+            if (item == list[j]) {
+                count += 1;
+            }
+        }
+        return count;
+        // return 0;
+    }
     /**
     * Returns a boolean indicating whether the parameter i.e a List object is
     * exactly matching with the given list or not.
@@ -461,6 +479,9 @@ public class List {
                 break;
                 case "clear":
                     l.clear();
+                break;
+                case "count":
+                System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
                 default:
                 break;
