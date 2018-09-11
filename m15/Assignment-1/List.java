@@ -321,11 +321,15 @@ public class List {
      //    return list1;
      //}
      try {
+        if ((start <= 0 || end > size) || end < 0) {
+            throw new IndexOutOfBoundsException("");
+        } else {
         List list1 = new List();
         for (int i = start; i < end; i++) {
             list1.add(list[i]);
         }
         return list1;
+    }
      }
      catch(IndexOutOfBoundsException ib) {
         System.out.println("Index Out of Bounds Exception");
