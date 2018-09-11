@@ -92,19 +92,15 @@ class Sortedset extends Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public int last() {
-        try {
-            if (size == 0) {
+    public int last() throws SetEmptyException{
+        if (size == 0) {
             // System.out.println("Set Empty Exception");
-            throw new SetEmptyException(""); 
+            throw new SetEmptyException("Set Empty Exception"); 
             // return -1;
-        }
-        } catch(SetEmptyException se) {
-            System.out.println("Set Empty Exception");
+        } else {
+            return set[size - 1];
         }
         // return 0;
-        return set[size - 1];
-        
     }
     /**
      * Adds all.
@@ -212,8 +208,12 @@ final class Solution {
                 if (tokens.length != 1) {
                     break;
                 }
+                try {
                 int temp = s.last();
                 System.out.println(temp);
+                } catch(SetEmptyException se) {
+                    System.out.println(se.getMessage());
+                }
                 break;
                 case "addAll":
                 int[] intArr = intArray(tokens[1]);
