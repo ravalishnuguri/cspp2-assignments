@@ -213,8 +213,41 @@ final class Solution {
                     s.add(intArr);
                 }
                 break;
+                case "add":
+                int[] intArray = intArray(tokens[1]);
+                if (intArray.length == 1) {
+                    s.add(intArray[0]);
+                } else {
+                    s.add(intArray);
+                }
+                break;
                 case "print":
                 System.out.println(s);
+                break;
+                case "intersection":
+                s = new Sortedset();
+                Set t = new Set();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                t.add(intArray);
+                System.out.println(s.intersection(t));
+                break;
+                case "retainAll":
+                s = new Sortedset();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                System.out.println(s.retainAll(intArray));
+                break;
+                case "cartesianProduct":
+                s = new Sortedset();
+                t = new Set();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                t.add(intArray);
+                System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
                 break;
                 default:
                 break;
