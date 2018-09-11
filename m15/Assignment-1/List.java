@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 
 /**
- * Exception for signaling invalid position errors.
+ * Exception for invalid position errors.
  */
 class InvalidPositionException extends Exception {
     /**
