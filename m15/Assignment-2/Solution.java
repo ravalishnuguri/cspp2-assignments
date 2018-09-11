@@ -2,6 +2,9 @@ import java.util.Scanner;
 import java.io.BufferedInputStream;
 import java.util.Arrays;
 
+/**
+ * Exception for signaling invalid subset selection errors.
+ */
 class InvalidSubsetSelectionException extends Exception {
     /**
      * Constructs the object.
@@ -13,6 +16,9 @@ class InvalidSubsetSelectionException extends Exception {
     }
 }
 
+/**
+ * Exception for signaling set empty errors.
+ */
 class SetEmptyException extends Exception {
     /**
      * Constructs the object.
@@ -54,8 +60,8 @@ class Sortedset extends Set {
                 }
             }
         }
-        return Arrays.copyOf(result, k);    
-        } catch(InvalidSubsetSelectionException ia) {
+        return Arrays.copyOf(result, k);
+        } catch (InvalidSubsetSelectionException ia) {
             System.out.println("Invalid Arguments to Subset Exception");
         }
         return null;
@@ -82,7 +88,7 @@ class Sortedset extends Set {
         } else {
             throw new SetEmptyException("");
         }
-        } catch(SetEmptyException se) {
+        } catch (SetEmptyException se) {
             System.out.println("Set Empty Exception");
         }
         return null;
@@ -91,11 +97,13 @@ class Sortedset extends Set {
      * function_description.
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     SetEmptyException  { exception_description }
      */
-    public int last() throws SetEmptyException{
+    public int last() throws SetEmptyException {
         if (size == 0) {
             // System.out.println("Set Empty Exception");
-            throw new SetEmptyException("Set Empty Exception"); 
+            throw new SetEmptyException("Set Empty Exception");
             // return -1;
         } else {
             return set[size - 1];
@@ -211,7 +219,7 @@ final class Solution {
                 try {
                 int temp = s.last();
                 System.out.println(temp);
-                } catch(SetEmptyException se) {
+                } catch (SetEmptyException se) {
                     System.out.println(se.getMessage());
                 }
                 break;
