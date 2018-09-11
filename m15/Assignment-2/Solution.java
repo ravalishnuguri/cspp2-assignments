@@ -68,7 +68,8 @@ class Sortedset extends Set {
      * @return     { description_of_the_return_value }
      */
     public int[] headSet(final int toElement) {
-        int[] result = new int[size];
+        try {
+            int[] result = new int[size];
         int count = 0;
         for (int i = 0; i < size; i++) {
             if (set[i] < toElement) {
@@ -76,7 +77,15 @@ class Sortedset extends Set {
                 count++;
             }
         }
-        return Arrays.copyOf(result, count);
+        if (count == 1) {
+            return Arrays.copyOf(result, count);
+        } else {
+            throw new SetEmptyException("");
+        }
+        } catch(SetEmptyException se) {
+            System.out.println("Set Empty Exception");
+        }
+        return null;
     }
     /**
      * function_description.
