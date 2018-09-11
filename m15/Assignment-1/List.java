@@ -3,8 +3,16 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 
+/**
+ * Exception for signaling invalid position errors.
+ */
 class InvalidPositionException extends Exception {
-    InvalidPositionException(String s) {
+    /**
+     * Constructs the object.
+     *
+     * @param      s     { parameter_description }
+     **/
+    InvalidPositionException(final String s) {
         super(s);
     }
 }
