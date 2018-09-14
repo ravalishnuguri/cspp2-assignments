@@ -1,4 +1,8 @@
 import java.util.Scanner;
+
+/**
+ * Class for solution.
+ */
 public final class Solution {
     /**
      * Constructs the object.
@@ -57,7 +61,7 @@ public final class Solution {
                 break;
 
                 default:
-                break; 
+                break;
             }
         }
     }
