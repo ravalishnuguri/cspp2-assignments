@@ -7,7 +7,7 @@ class BookYourShow {
 	}
 
 	public void addAShow(Show var) {
-		showsArray[size] = var;
+		showsArray[size++] = var;
 	}
 	public Show getAShow(String moviename, String datetime) {
 		for (Show s : showsArray) {
@@ -73,7 +73,7 @@ class BookYourShow {
 		}
 		//moviename
 		if (booked) {
-			System.out.println(mobilenum + " " + " " + datetime);
+			System.out.println(mobilenum + " " + moviename + " " + datetime);
 		} else {
 			System.out.println("Invalid");
 		}
