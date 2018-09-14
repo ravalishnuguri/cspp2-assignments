@@ -1,10 +1,22 @@
-import java.util.*;
+import java.util.Scanner;
+/**
+ * Class for solution.
+ */
 class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() { }
+    /**
+     * function_description.
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         ShoppingCart shop = new ShoppingCart();
         Scanner sc = new Scanner(System.in);
         int lines = Integer.parseInt(sc.nextLine());
-        for(int i =0;i< lines;i++){
+        for(int i = 0;i < lines; i++){
             String[] input = sc.nextLine().split(" ");
             switch(input[0]){
                 case "Item":
@@ -22,10 +34,10 @@ class Solution {
                 shop.showCart();
                 break;
                 case "totalAmount":
-                System.out.println("totalAmount: "+ shop.getTotalAmount());
+                System.out.println("totalAmount: " + shop.getTotalAmount());
                 break;
                 case "payableAmount":
-                System.out.println("Payable amount: "+ shop.getPayableAmount());
+                System.out.println("Payable amount: " + shop.getPayableAmount());
                 break;
                 case "remove":
                 String[] tokens12 = input[1].split(",");
