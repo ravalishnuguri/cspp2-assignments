@@ -21,7 +21,7 @@ final class Solution {
             switch (input[0]) {
                 case "Item":
                 String[] tokens = input[1].split(",");
-                shop.addToCatalog(new Item(tokens[0], tokens[1],tokens[2]));
+                shop.addToCatalog(new Item(tokens[0], tokens[1], tokens[2]));
                 break;
                 case "catalog":
                 shop.showCatalog();
@@ -37,11 +37,12 @@ final class Solution {
                 System.out.println("totalAmount: " + shop.getTotalAmount());
                 break;
                 case "payableAmount":
-                System.out.println("Payable amount: " + shop.getPayableAmount());
+                System.out.println
+                ("Payable amount: " + shop.getPayableAmount());
                 break;
                 case "remove":
                 String[] tokens12 = input[1].split(",");
-                shop.removeFromCart(new Item(tokens12[0],tokens12[1]));
+                shop.removeFromCart(new Item(tokens12[0], tokens12[1]));
                 break;
                 case "coupon":
                 shop.applyCoupon(input[1]);
