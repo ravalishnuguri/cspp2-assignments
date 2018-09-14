@@ -59,7 +59,7 @@ class BookYourShow {
 	public void printTicket(String moviename, String datetime, String mobilenum) {
 		boolean booked = false;
 		for (Show s : showsArray) {
-			if (s == null) {
+			if (s != null) {
 				if (s.movieName.equals(moviename) && s.dateTime.equals(datetime)) {
 					for (int i = 0; i < s.booked.length; i++) {
 						if (s.booked[i] != null) {
