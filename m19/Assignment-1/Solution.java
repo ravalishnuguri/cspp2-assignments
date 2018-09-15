@@ -115,10 +115,25 @@ public final class Solution {
  * Class for quiz.
  */
 class Quiz {
+    /**
+     * var_description.
+     */
     private String[] question;
+    /**
+     * var_description.
+     */
     private String[] choice;
+    /**
+     * var_description.
+     */
     private int[] penalty;
+    /**
+     * var_description.
+     */
     private int[] points;
+    /**
+     * var_description.
+     */
     private int[] maxmarks;
     /**
      * Constructs the object.
@@ -138,7 +153,7 @@ class Quiz {
         this.choice = choice;
         this.penalty = penalty;
         this.points = points;
-        this.maxmarks = maxmarks; 
+        this.maxmarks = maxmarks;
     }
 
 }
