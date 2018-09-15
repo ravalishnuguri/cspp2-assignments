@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 /**
  * Solution class for code-eval.
@@ -62,11 +62,7 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        // String[] tok = line.split(":");
-        String lines = s.nextLine();
-        for(int i =0; i < questionCount; i++) {
-            String[] array = s.nextLine().split(":");
-        }
+        
         if (questionCount == 0 ) {
             System.out.println("Quiz does not have questions");
         } else {
