@@ -62,10 +62,18 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        String[] input = new String[30];
         for (int i = 0; i < questionCount; i++) {
-            String[] input = s.nextLine().split(":");
+            input = s.nextLine().split(":");
             System.out.println(input[1]);
         }
+        //int m = input.length();
+        // for (int j = 0; j< input[1].length;j++) {
+        //     String[] in = s.nextLine().split(",");
+        //     System.out.println(in[0]);
+        // }
+        System.out.println(input[2]);
+        System.out.println(input[3]);
         if (questionCount == 0 ) {
             System.out.println("Quiz does not have questions");
         } else if (questionCount == 1) {
