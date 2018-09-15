@@ -63,10 +63,13 @@ public final class Solution {
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         String[] input = new String[30];
+        int count = 0;
         for (int i = 0; i < questionCount; i++) {
             input = s.nextLine().split(":");
+            count++;
             // System.out.println(input[1]);
         }
+        System.out.println(count);
         String[] in = new String[30];
         // int m = input.length();
         // for (int j = 0; j< ;j++) {
