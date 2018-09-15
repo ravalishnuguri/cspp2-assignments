@@ -65,15 +65,14 @@ public final class Solution {
         String[] input = new String[30];
         for (int i = 0; i < questionCount; i++) {
             input = s.nextLine().split(":");
-            System.out.println(input[1]);
+            // System.out.println(input[1]);
         }
-        //int m = input.length();
-        // for (int j = 0; j< input[1].length;j++) {
-        //     String[] in = s.nextLine().split(",");
-        //     System.out.println(in[0]);
+        String[] in = new String[30];
+        // int m = input.length();
+        // for (int j = 0; j< ;j++) {
+        //     String[] inp = s.nextLine().split(",");
+        //     // System.out.println(in[0]);
         // }
-        System.out.println(input[2]);
-        System.out.println(input[3]);
         if (questionCount == 0 ) {
             System.out.println("Quiz does not have questions");
         } else if (questionCount == 1) {
