@@ -69,7 +69,7 @@ public final class Solution {
             count++;
             // System.out.println(input[1]);
         }
-        System.out.println(input[1]);
+        // System.out.println(input[1]);
         String[] in = new String[30];
         // int m = input.length();
         // for (int j = 0; j< ;j++) {
