@@ -62,7 +62,10 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        
+        for (int i = 0; i < questionCount; i++) {
+            String[] input = s.nextLine().split(":");
+            System.out.println(input[0]);
+        }
         if (questionCount == 0 ) {
             System.out.println("Quiz does not have questions");
         } else if (questionCount == 1) {
@@ -98,14 +101,29 @@ public final class Solution {
 }
 
 
+/**
+ * Class for quiz.
+ */
 class Quiz {
     String[] question;
     String[] choice;
     int[] penalty;
     int[] points;
     int[] maxmarks;
+    /**
+     * Constructs the object.
+     */
     Quiz() { }
-    Quiz(String[] question, String[] choice, int[] penalty, int[] points, int[] maxmarks) {
+    /**
+     * Constructs the object.
+     *
+     * @param      question  The question
+     * @param      choice    The choice
+     * @param      penalty   The penalty
+     * @param      points    The points
+     * @param      maxmarks  The maxmarks
+     */
+    Quiz(final String[] question, final String[] choice, final int[] penalty, final int[] points, final int[] maxmarks) {
         this.question = question;
         this.choice = choice;
         this.penalty = penalty;
