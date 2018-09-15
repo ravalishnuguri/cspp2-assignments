@@ -64,7 +64,7 @@ public final class Solution {
         // add the question objects to the quiz class
         for (int i = 0; i < questionCount; i++) {
             String[] input = s.nextLine().split(":");
-            System.out.println(input[0]);
+            System.out.println(input[1]);
         }
         if (questionCount == 0 ) {
             System.out.println("Quiz does not have questions");
