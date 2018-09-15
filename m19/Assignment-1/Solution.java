@@ -62,7 +62,12 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class4
-        System.out.println(questionCount + " are added to the quiz");
+        
+        if (questionCount == 0 ) {
+            System.out.println("Quiz does not have questions");
+        } else {
+            System.out.println(questionCount + " are added to the quiz");
+        }
     }
 
     /**
@@ -76,6 +81,7 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
+        
     }
 
     /**
@@ -90,5 +96,18 @@ public final class Solution {
 
 
 class Quiz {
+    String[] question;
+    String[] choice;
+    int[] penalty;
+    int[] points;
+    int[] maxmarks;
+    Quiz() { }
+    Quiz(String[] question, String[] choice, int[] penalty, int[] points, int[] maxmarks) {
+        this.question = question;
+        this.choice = choice;
+        this.penalty = penalty;
+        this.points = points;
+        this.maxmarks = maxmarks; 
+    }
 
 }
