@@ -69,6 +69,7 @@ public final class Solution {
             count++;
             // System.out.println(input[1]);
         }
+        System.out.println(input[1]);
         String[] in = new String[30];
         // int m = input.length();
         // for (int j = 0; j< ;j++) {
@@ -114,11 +115,11 @@ public final class Solution {
  * Class for quiz.
  */
 class Quiz {
-    String[] question;
-    String[] choice;
-    int[] penalty;
-    int[] points;
-    int[] maxmarks;
+    private String[] question;
+    private String[] choice;
+    private int[] penalty;
+    private int[] points;
+    private int[] maxmarks;
     /**
      * Constructs the object.
      */
