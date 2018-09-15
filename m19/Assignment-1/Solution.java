@@ -71,6 +71,9 @@ public final class Solution {
         }
         // System.out.println(count);
         String[] in = new String[30];
+        in = s.nextLine().split(",");
+        System.out.println(in[0]);
+        System.out.println(in[1]);
         // int m = input.length();
         // for (int j = 0; j< ;j++) {
         //     String[] inp = s.nextLine().split(",");
