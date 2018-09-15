@@ -79,11 +79,7 @@ public final class Solution {
         if (questionCount == 0 ) {
             System.out.println("Quiz does not have questions");
         } else if (questionCount == 1) {
-            if (input[1]!=null) {
-                System.out.println(input[0] + "  does not have enough answer choices");
-            } else {
                 System.out.println("Error! Malformed question");
-            }
         }
         else {
             System.out.println(questionCount + " are added to the quiz");
