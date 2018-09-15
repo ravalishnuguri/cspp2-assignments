@@ -69,10 +69,7 @@ public final class Solution {
         }
         if (questionCount == 0 ) {
             System.out.println("Quiz does not have questions");
-        } else if (questionCount == 1) {
-            System.out.println("Error! Malformed question");
-        }
-        else {
+        } else {
             System.out.println(questionCount + " are added to the quiz");
         }
     }
