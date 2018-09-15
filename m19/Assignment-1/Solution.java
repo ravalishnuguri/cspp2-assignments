@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Solution class for code-eval.
@@ -61,11 +61,18 @@ public final class Solution {
     public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
-        // add the question objects to the quiz class4
-        
+        // add the question objects to the quiz class
+        // String[] tok = line.split(":");
+        String lines = s.nextLine();
+        for(int i =0; i < questionCount; i++) {
+            String[] array = s.nextLine().split(":");
+        }
         if (questionCount == 0 ) {
             System.out.println("Quiz does not have questions");
-        } else {
+        } else if (questionCount == 1) {
+            System.out.println("Error! Malformed question");
+        }
+        else {
             System.out.println(questionCount + " are added to the quiz");
         }
     }
