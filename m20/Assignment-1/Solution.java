@@ -271,19 +271,18 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        int flag = 0;
         try {
-            if(q>0){
-            for (int i = 0; i<q; i++) {
+            if (q > 0){
+            for (int i = 0; i < q; i++) {
                 String line = scan.nextLine();
                 String[] in = line.split(":");
                 if (in.length == 5 && in[0].length() > 1) {
                     String[] choic3 = line.split(",");
                     if (choic3.length > 1) {
-                        if (Integer.parseInt(in[2])< 4){
-                            if (Integer.parseInt(in[3])> 0) {
-                                if (Integer.parseInt(in[4])<=0) {
-                                    quiz.addQuestion(new Question(in[0],choic3, Integer.parseInt(in[2]),Integer.parseInt(in[3]),Integer.parseInt(in[4])));
+                        if (Integer.parseInt(in[2]) < 4){
+                            if (Integer.parseInt(in[3]) > 0) {
+                                if (Integer.parseInt(in[4]) <= 0) {
+                                    quiz.addQuestion(new Question(in[0], choic3, Integer.parseInt(in[2]), Integer.parseInt(in[3]), Integer.parseInt(in[4])));
                                 } else {
                                     System.out.println("Invalid penalty for " + in[0]);
                                     throw new Exception();
