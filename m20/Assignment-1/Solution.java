@@ -161,7 +161,7 @@ class Quiz {
      * @param      q     The question
      */
     public void addQuestion(final Question q) {
-
+        this.questions[this.size++] = q;
     }
     /**
      * Gets the question.
@@ -171,7 +171,7 @@ class Quiz {
      * @return     The question.
      */
     public Question getQuestion(final int index) {
-        return null;
+        return this.questions[index];
     }
     /**
      * Shows the report.
