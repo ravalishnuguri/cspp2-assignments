@@ -255,7 +255,7 @@ public final class Solution {
                         if (Integer.parseInt(in[2])< 4){
                             if (Integer.parseInt(in[3])> 0) {
                                 if (Integer.parseInt(in[4])<=0) {
-                                    flag = 0;
+                                    quiz.addQuestion(new Question(in[0],choic3, Integer.parseInt(in[2]),Integer.parseInt(in[3]),Integer.parseInt(in[4])));
                                 } else {
                                     System.out.println("Invalid penalty for " + in[0]);
                                     throw new Exception();
