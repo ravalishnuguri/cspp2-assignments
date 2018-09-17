@@ -272,21 +272,27 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        final int num1 = 3;
+        final int num2 = 4;
+        final int num3 = 5;
         try {
             if (q > 0){
             for (int i = 0; i < q; i++) {
                 String line = scan.nextLine();
                 String[] in = line.split(":");
-                if (in.length == 5 && in[0].length() > 1) {
+                if (in.length == num3 && in[0].length() > 1) {
                     String[] choic3 = in[1].split(",");
                     // for(int k = 0; k< choic3.length;k++) {
                     //     System.out.println(choic3[k]);
                     // }
                     if (choic3.length > 1) {
-                        if (Integer.parseInt(in[2]) <= 4){
-                            if (Integer.parseInt(in[3]) > 0) {
-                                if (Integer.parseInt(in[4]) <= 0) {
-                                    quiz.addQuestion(new Question(in[0], choic3, Integer.parseInt(in[2]), Integer.parseInt(in[3]), Integer.parseInt(in[4])));
+                        if (Integer.parseInt(in[2]) <= num2){
+                            if (Integer.parseInt(in[num1]) > 0) {
+                                if (Integer.parseInt(in[num2]) <= 0) {
+                                    quiz.addQuestion(new Question(in[0],
+                                        choic3, Integer.parseInt(in[2]),
+                                        Integer.parseInt(in[num1]),
+                                        Integer.parseInt(in[num2])));
                                 } else {
                                     System.out.println("Invalid penalty for " + in[0]);
                                     throw new Exception();
@@ -296,11 +302,12 @@ public final class Solution {
                                 throw new Exception();
                             }
                         } else {
-                            System.out.println("Error! Correct answer choice number is out of range for "+ in[0]);
+                    System.out.println("Error! Correct answer choice number" +
+                        " is out of range for "+ in[0]);
                             throw new Exception();
                         }
                     } else {
-                        System.out.println(in[0]+ " does not have enough answer choices");
+        System.out.println(in[0] + " does not have enough answer choices");
                         throw new Exception();
                     }
                 } else {
