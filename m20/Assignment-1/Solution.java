@@ -67,7 +67,9 @@ class Question {
      * @return     The correct answer.
      */
     public String getCorrectAnswer() {
-        if (this.choices.length >= this.correctAnswer) {}
+        if (this.choices.length >= this.correctAnswer) {
+             return this.choices[this.correctAnswer - 1];
+        }
         return null;
     }
     /**
@@ -180,6 +182,24 @@ class Quiz {
      */
     public String showReport() {
         String s = "";
+        int score = 0, c = 0;
+        for (int i = 0; i < this.size; i++) {
+            s += questions[i].getQuestionText() + "\n";
+            if (questions[i].evaluateResponse(questions[i].getResponse())) {
+                s += " Correct Answer! - Marks Awarded: "
+                    + questions[i].getMaxMarks() + "\n";
+                score += questions[i].getMaxMarks();
+                c++;
+            } else {
+                s += " Wrong Answer! - Penalty: "
+                    + questions[i].getPenalty() + "\n";
+                score += questions[i].getPenalty();
+                c++;
+            }
+        }
+        if (c > 0) {
+            s += "Total Score: " + score;
+        }
         return s;
     }
     public int getSize() {
