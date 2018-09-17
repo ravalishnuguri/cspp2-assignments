@@ -130,7 +130,7 @@ class Question {
         s += getQuestionText() + "(" + getMaxMarks() + ")" + "\n";
         for (int i = 0; i < this.choices.length - 1; i++) {
             s += this.choices[i] + "\t";
-            System.out.println(this.choices[i]);
+            // System.out.println(this.choices[i]);
         } s += this.choices[this.choices.length - 1] + "\n";
         return s;
     }
@@ -279,6 +279,9 @@ public final class Solution {
                 String[] in = line.split(":");
                 if (in.length == 5 && in[0].length() > 1) {
                     String[] choic3 = line.split(",");
+                    for(int k = 0; k< choic3.length;k++) {
+                        System.out.println(choic3[k]);
+                    }
                     if (choic3.length > 1) {
                         if (Integer.parseInt(in[2]) <= 4){
                             if (Integer.parseInt(in[3]) > 0) {
