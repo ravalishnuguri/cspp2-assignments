@@ -203,6 +203,11 @@ class Quiz {
         }
         return s;
     }
+    /**
+     * Gets the size.
+     *
+     * @return     The size.
+     */
     public int getSize() {
         return this.size;
     }
@@ -276,7 +281,7 @@ public final class Solution {
         final int num2 = 4;
         final int num3 = 5;
         try {
-            if (q > 0){
+            if (q > 0) {
             for (int i = 0; i < q; i++) {
                 String line = scan.nextLine();
                 String[] in = line.split(":");
@@ -286,7 +291,7 @@ public final class Solution {
                     //     System.out.println(choic3[k]);
                     // }
                     if (choic3.length > 1) {
-                        if (Integer.parseInt(in[2]) <= num2){
+                        if (Integer.parseInt(in[2]) <= num2) {
                             if (Integer.parseInt(in[num1]) > 0) {
                                 if (Integer.parseInt(in[num2]) <= 0) {
                                     quiz.addQuestion(new Question(in[0],
@@ -294,16 +299,16 @@ public final class Solution {
                                         Integer.parseInt(in[num1]),
                                         Integer.parseInt(in[num2])));
                                 } else {
-                                    System.out.println("Invalid penalty for " + in[0]);
+            System.out.println("Invalid penalty for " + in[0]);
                                     throw new Exception();
                                 }
                             } else {
-                                System.out.println("Invalid max marks for " + in[0]);
+            System.out.println("Invalid max marks for " + in[0]);
                                 throw new Exception();
                             }
                         } else {
-                    System.out.println("Error! Correct answer choice number" +
-                        " is out of range for "+ in[0]);
+                    System.out.println("Error! Correct answer choice number"
+                        + " is out of range for " + in[0]);
                             throw new Exception();
                         }
                     } else {
