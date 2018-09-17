@@ -265,7 +265,7 @@ public final class Solution {
                                 throw new Exception();
                             }
                         } else {
-                            System.out.println("Error! Correct answer choice numberis out of range for "+ in[0]);
+                            System.out.println("Error! Correct answer choice number is out of range for "+ in[0]);
                             throw new Exception();
                         }
                     } else {
