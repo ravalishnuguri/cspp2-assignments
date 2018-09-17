@@ -214,7 +214,7 @@ class Quiz {
 
 }
 /**
- * Solution class for code-eval.
+ * Solution class for code.
  */
 public final class Solution {
      /**
