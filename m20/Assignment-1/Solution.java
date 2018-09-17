@@ -278,10 +278,10 @@ public final class Solution {
                 String line = scan.nextLine();
                 String[] in = line.split(":");
                 if (in.length == 5 && in[0].length() > 1) {
-                    String[] choic3 = line.split(",");
-                    for(int k = 0; k< choic3.length;k++) {
-                        System.out.println(choic3[k]);
-                    }
+                    String[] choic3 = in[1].split(",");
+                    // for(int k = 0; k< choic3.length;k++) {
+                    //     System.out.println(choic3[k]);
+                    // }
                     if (choic3.length > 1) {
                         if (Integer.parseInt(in[2]) <= 4){
                             if (Integer.parseInt(in[3]) > 0) {
