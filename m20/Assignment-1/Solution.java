@@ -125,6 +125,10 @@ class Question {
      */
     public String toString() {
         String s = "";
+        s += getQuestionText() + "(" + getMaxMarks() + ")" + "\n";
+        for (int i = 0; i < this.choices.length - 1; i++) {
+            s += this.choices[i] + "\t";
+        } s += this.choices[this.choices.length - 1] + "\n";
         return s;
     }
 }
@@ -148,7 +152,8 @@ class Quiz {
      * Constructs the object.
      */
     Quiz() {
-
+        this.questions = new Question[onehundred];
+        this.size = 0;
     }
     /**
      * Adds a question.
@@ -176,6 +181,9 @@ class Quiz {
     public String showReport() {
         String s = "";
         return s;
+    }
+    public int getSize() {
+        return this.size;
     }
 
 }
@@ -305,5 +313,6 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report using quiz object.
+        System.out.println(quiz.showReport());
     }
 }
