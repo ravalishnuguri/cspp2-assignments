@@ -230,8 +230,8 @@ public class StringList implements StringListInterface{
      * invoked when an object variable is used in println.
      * For example:
      * List l = new List();
-     * System.out.println(l);
      * This statement is a shortcut for
+     * System.out.println(l);
      * System.out.println(l.toString());
      * 
      * So, implement the toString method to display the items

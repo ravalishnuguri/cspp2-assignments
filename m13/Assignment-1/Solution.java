@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * Class for set.
- * @author : 20186069.
+ * @author :
  */
 class Set {
     //your code goes here...
@@ -185,53 +185,7 @@ class Set {
      * @return     { description_of_the_return_value }
      */
     public String retainAll(final int[] a) {
-        // return null;
-        // int members = 0;
-        // for (int i = 0; i < set.length; i++) {
-        //     int x = 0;
-        //     x = set[i];
-        // if (a.contains(x)) {
-        //     members++;
-        // }
-        // }
-        // System.out.println(members);
-        int count = 0;
-        for (int i = 0; i < set.length; i++) {
-        for (int j = 0; j < a.length; j++) {
-            if (set[i] == a[j]) {
-                count++;
-            }
-        }
-    }
-        int[] newMembers = new int[count];
-        int position = 0;
-        // for (int i = 0; i < set.length; i++) {
-        // if (a.contains(set[i])) {
-        //     // System.out.println(set[i]);
-        //     // x = set[i];
-        //     newMembers[position++] = set[i];
-        // }
-    // }
-    for (int i = 0; i < set.length; i++) {
-        for (int j = 0; j < a.length; j++) {
-            if (set[i] == a[j]) {
-                newMembers[position++] = set[i];
-            }
-        }
-    }
-    int n = newMembers.length;
-    if (n == 0) {
-        System.out.print("{}");
-    } else {
-        System.out.print("{");
-        for (int p = 0; p < n - 1; p++) {
-            System.out.print(newMembers[p] + ", ");
-        }
-        System.out.print(newMembers[n - 1] + "}");
-    }
-    // return new Set(newMembers);
-        return "";
-
+        return null;
     }
     /**
      * function_description.
