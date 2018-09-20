@@ -5,16 +5,10 @@ class Solution {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String s = sc.nextLine();
-		File file = new File("E:/MSIT/CSPP2/cspp2-assignments/m23/Assignment-1/");
+		File file = new File(s);
         File[] files = file.listFiles();
         for(File f: files){
-            // System.out.println(f.getName());
-            if (f.getName().equals(s)) {
-            	// System.out.println(f.getName());
-            } else if (s == "") {
-            	System.out.println("empty directory");
-            	break;
-            }
+            System.out.println(f.getName());     
         }
 
 	}
