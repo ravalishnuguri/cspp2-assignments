@@ -10,8 +10,8 @@ class Solution {
         for(File f: files){
             // System.out.println(f.getName());
             if (f.getName().equals(s)) {
-            	System.out.println(f.getName());
-            } else {
+            	// System.out.println(f.getName());
+            } else if (s == "") {
             	System.out.println("empty directory");
             	break;
             }
