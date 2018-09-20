@@ -5,7 +5,7 @@ class Solution {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String s = sc.nextLine();
-		if (s == null){
+		if (s.isEmpty()){
 			// System.out.println("empty directory");
 			throw new NoSuchElementException("empty directory");
 		}else {
