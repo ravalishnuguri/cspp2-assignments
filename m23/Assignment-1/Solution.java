@@ -1,31 +1,8 @@
-// import java.util.*;
-// import java.io.*;
-// class Solution {
-//     private Solution() { }
-//     public static void main(String[] args) {
-//         Scanner sc = new Scanner(System.in);
-//         String s = sc.nextLine();
-//         if (s.isEmpty()){
-//             // System.out.println("empty directory");
-//             throw new NoSuchElementException("empty directory");
-//         } else {
-//             File file = new File(s);
-//             File[] files = file.listFiles();
-//             // Arrays.sort(files, (f1, f2) -> f1.compareTo(f2));
-//             for(File f: files){
-//             System.out.println(f.getName());
-//             }
-//         }
-//     }
-// }
-// class plag {
-    
-// }
 import java.util.*;
 import java.io.*;
 import java.lang.*;
 class plagiarism {
-    public HashMap map(File filename){
+    public HashMap map(File filename) {
         HashMap<String,Integer> hm = new <String,Integer>HashMap();
         try{
             BufferedReader b = new BufferedReader(new FileReader(filename));
@@ -34,7 +11,7 @@ class plagiarism {
                 String[] line = str.split(" ");
                 String word ="";
                 for(int i = 0;i<line.length;i++) {
-                    word = line[i].replaceAll("[.,*%&!@#$():?-]","").trim().toLowerCase();
+                    word = line[i].replaceAll("[.,*%&!@ #$():?-]","").trim().toLowerCase();
                     if(word.length()>0){
                         if(hm.containsKey(word)) {
                             hm.put(word,hm.get(word)+1);
@@ -98,8 +75,8 @@ class solution {
             hashmaparray[temp] = p.map(print);
             temp++;
         }
-        for(int i = 0;i<filearray.length;i++){
-            for(int j = 0; j< filearray.length;j++){
+        for(int i = 0;i<filearray.length;i++) {
+            for(int j = 0; j< filearray.length;j++) {
                 result[i][j] = Math.round(p.similarity(hashmaparray[i],hashmaparray[j])*100);
             }
         }
@@ -116,4 +93,12 @@ class solution {
             System.out.println();
         }
     } 
+}
+
+
+
+class stringmatching {
+    public double lcs(HashMap<String,Integer> hm1,HashMap<String,Integer> hm2) {
+        return 0;
+    }
 }
