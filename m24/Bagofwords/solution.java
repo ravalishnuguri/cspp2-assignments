@@ -14,14 +14,14 @@ import java.io.BufferedReader;
  */
 class plagiarism {
     /**
-     * { function_description }
+     * function_description.
      *
      * @param      filename  The filename
      *
      * @return     { description_of_the_return_value }
      */
     public HashMap map(final File filename) {
-        HashMap <String, Integer> hm = new <String, Integer> HashMap();
+        HashMap<String, Integer> hm = new <String, Integer>HashMap();
         try {
             BufferedReader b = new BufferedReader(new FileReader(filename));
             String str = b.readLine();
@@ -54,7 +54,7 @@ class plagiarism {
      * @return     { description_of_the_return_value }
      */
     public double similarity(final HashMap<String,Integer> hm1,
-        final HashMap<String,Integer> hm2) {
+        final HashMap<String, Integer> hm2) {
         double frequencyvector1 = 0, frequencyvector2 = 0;
         double similarity;
         int dotproduct = 0;
@@ -62,8 +62,6 @@ class plagiarism {
             frequencyvector1 = frequencyvector1 + Math.pow(i, 2);
         }
         frequencyvector1 = Math.sqrt(frequencyvector1);
-        
-
         for (int i : hm2.values()) {
             frequencyvector2 = frequencyvector2 + Math.pow(i, 2);
         }
@@ -84,7 +82,7 @@ class solution {
     /**
      * Constructs the object.
      */
-    solution() { }
+    private solution() { }
     /**
      * function_description.
      *
