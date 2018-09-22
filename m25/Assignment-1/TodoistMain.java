@@ -30,6 +30,9 @@ class Task {
         // }
         // catch(Exception e) {
         // }
+        if (this.title == "") {
+            return "Title not provided";
+        }
         return this.title;
          }
     public String getname() {
