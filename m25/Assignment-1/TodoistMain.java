@@ -28,7 +28,7 @@ class Task {
             // this.title = title1;
             this.name = assignedTo;
             // this.time = timeToComplete;
-            this.stat = status;
+            // this.stat = status;
             this.imp = important;
             this.urg = urgent;
             if (timeToComplete > 0) {
