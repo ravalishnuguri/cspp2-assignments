@@ -1,6 +1,17 @@
-import java.util.*;
-import java.io.*;
-import java.lang.*;
+// import java.util.*;
+// import java.io.*;
+// import java.lang.*;
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileReader;
+// import java.io.FileNotFoundException;
+import java.util.HashMap;
+// import java.util.NoSuchElementException;
+import java.util.Map;
+import java.io.BufferedReader;
+/**
+ * Class for plagiarism.
+ */
 class plagiarism {
     public HashMap map(File filename) {
         HashMap<String,Integer> hm = new <String,Integer>HashMap();
@@ -22,11 +33,19 @@ class plagiarism {
                 }
                 str = b.readLine();
             }
-        }catch(Exception e){
+        } catch(Exception e){
             System.out.println(e);
         }
         return hm;
     }
+    /**
+     * { function_description }
+     *
+     * @param      hm1   The hm 1
+     * @param      hm2   The hm 2
+     *
+     * @return     { description_of_the_return_value }
+     */
     public double similarity(HashMap<String,Integer> hm1,HashMap<String,Integer> hm2) {
         double frequencyvector1 = 0,frequencyvector2 = 0;
         double similarity;
@@ -54,8 +73,16 @@ class plagiarism {
         return similarity;
     }   
 }
+/**
+ * Class for solution.
+ */
 class solution {
-    public static void main(String[] args) {
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         
         Scanner sc = new Scanner(System.in);
         String foldername;
