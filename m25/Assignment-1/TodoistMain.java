@@ -123,7 +123,9 @@ class Task {
     public String toString() {
         String s = "";
         s += gettitle() + ", " + getname() + ", " + gettime() + ", " + getimp() + ", " + geturgent() + ", " + getStatus();
-        if ((flag == 0) && (count == 0)) {
+        if (flag == 0) {
+            return "";
+        } else if (count == 0) {
             return "";
         }
         return s;
