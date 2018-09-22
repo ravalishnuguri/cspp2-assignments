@@ -18,6 +18,15 @@ class Task {
         this.stat = status;
         this.imp = important;
         this.urg = urgent;
+        try {
+           if (this.time < 0) {
+            throw new Exception("Invalid timeToComplete" + this.time);
+            } 
+        }
+        catch(Exception e) {
+            
+        }
+        
     }
     public String gettitle() {
         // try {
@@ -30,9 +39,6 @@ class Task {
         // }
         // catch(Exception e) {
         // }
-        if (this.title == "") {
-            return "Title not provided";
-        }
         return this.title;
          }
     public String getname() {
