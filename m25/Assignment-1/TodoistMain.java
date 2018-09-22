@@ -9,17 +9,48 @@ import java.util.Arrays;
 // }
 
 /**
-  * write your code below this comment
+  * write your code below this comment.
   */
 class Task {
-    String title;
-    String name, x, y;
-    int time;
-    boolean imp;
-    boolean urg;
-    String stat;
-    int flag,count, count1;
-    Task(String title1, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) {
+    /**
+     * { var_description }
+     */
+    private String title;
+    /**
+     * { item_description }
+     */
+    private String name, x, y;
+    /**
+     * { var_description }
+     */
+    private int time;
+    /**
+     * { var_description }
+     */
+    private boolean imp;
+    /**
+     * { var_description }
+     */
+    private boolean urg;
+    /**
+     * { var_description }
+     */
+    private String stat;
+    /**
+     * { item_description }
+     */
+    private int flag,count, count1;
+    /**
+     * Constructs the object.
+     *
+     * @param      title1          The title 1
+     * @param      assignedTo      The assigned to
+     * @param      timeToComplete  The time to complete
+     * @param      important       The important
+     * @param      urgent          The urgent
+     * @param      status          The status
+     */
+    Task(final String title1, final String assignedTo, final int timeToComplete, final boolean important, final boolean urgent, final String status) {
         try {
             flag = 0;
             count = 0;
@@ -68,6 +99,11 @@ class Task {
         }
         
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String gettitle() {
         // try {
         //     if (this.title == "") {
@@ -81,9 +117,19 @@ class Task {
         // }
         return this.title;
          }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String getname() {
         return this.name;
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int gettime() {
     //     try {
     //         if (this.time >= 0) {
@@ -99,35 +145,41 @@ class Task {
     // }
     return this.time;
 }
+    /**
+     * Gets the status.
+     *
+     * @return     The status.
+     */
     public String getStatus() {
-        // String x = "";
-        // try {
-        //     if (this.stat == "todo") {
-        //           x += this.stat;
-        //     } else if(this.stat == "done") {
-        //         x += this.stat;
-        //     } else {
-        //         System.out.println("Invalid status " + this.stat);
-        //         throw new Exception();
-        //     }
-        // }
-        // catch(Exception e) {
-        // }
-        // return x;
         return this.stat;
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String getimp() {
         if (this.imp) {
             return "Important";
         }
         return "Not Important";
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String geturgent() {
         if (this.urg) {
             return "Urgent";
         }
         return "Not Urgent";
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String s = "";
         s += gettitle() + ", " + getname() + ", " + gettime() + ", " + getimp() + ", " + geturgent() + ", " + getStatus();
@@ -141,20 +193,51 @@ class Task {
         return s;
     }
 }
+/**
+ * Class for todoist.
+ */
 class Todoist {
     Task[] taskinfo = new Task[10];
+    /**
+     * Constructs the object.
+     */
     Todoist() {
     }
-    public Task[] getNextTask(String pa, int n) {
+    /**
+     * Gets the next task.
+     *
+     * @param      pa    { parameter_description }
+     * @param      n     { parameter_description }
+     *
+     * @return     The next task.
+     */
+    public Task[] getNextTask(final String pa, final int n) {
         return null;
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String totalTime4Completion() {
         return null;
     }
-    public String getNextTask(String pa) {
+    /**
+     * Gets the next task.
+     *
+     * @param      pa    { parameter_description }
+     *
+     * @return     The next task.
+     */
+    public String getNextTask(final String pa) {
         return null;
     }
-    public void addTask(Task a) {
+    /**
+     * Adds a task.
+     *
+     * @param      a     { parameter_description }
+     */
+    public void addTask(final Task a) {
 
     }
 
