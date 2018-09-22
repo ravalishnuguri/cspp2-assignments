@@ -12,19 +12,19 @@ class Task {
     boolean urg;
     String stat;
     Task(String title1, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) {
-        this.title = title1;
-        this.name = assignedTo;
-        this.time = timeToComplete;
-        this.stat = status;
-        this.imp = important;
-        this.urg = urgent;
         try {
-           if (this.time < 0) {
-            throw new Exception("Invalid timeToComplete" + this.time);
+            this.title = title1;
+            this.name = assignedTo;
+            this.time = timeToComplete;
+            this.stat = status;
+            this.imp = important;
+            this.urg = urgent;
+            if (this.time < 0) {
+                throw new Exception("Invalid timeToComplete" + this.time);
             } 
         }
         catch(Exception e) {
-            
+
         }
         
     }
