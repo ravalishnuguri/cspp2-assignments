@@ -197,11 +197,14 @@ class Task {
  * Class for todoist.
  */
 class Todoist {
-    Task[] taskinfo = new Task[10];
+    Task[] taskinfo;
+    int size;
     /**
      * Constructs the object.
      */
     Todoist() {
+        taskinfo = new Task[40];
+        size = 0;
     }
     /**
      * Gets the next task.
@@ -238,7 +241,17 @@ class Todoist {
      * @param      a     { parameter_description }
      */
     public void addTask(final Task a) {
+        taskinfo[size++] = a;
 
+    }
+    public void ToString() {
+        // Task t = new Task();
+        String s2 = "";
+        for (int i = 0 ; i< size; i++) {
+            // s2 += gettitle() + ", " + getname() + ", " + gettime() + ", " + getimp() + ", " + geturgent() + ", " + getStatus() + "\n";
+
+        }
+        System.out.println(s2);
     }
 
 }
