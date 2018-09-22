@@ -18,10 +18,11 @@ class Task {
     boolean imp;
     boolean urg;
     String stat;
-    int flag;
+    int flag,count;
     Task(String title1, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) {
         try {
             flag = 0;
+            count = 0;
             x = "todo";
             y = "done";
             // this.title = title1;
@@ -39,7 +40,7 @@ class Task {
             }
             if (title1 != "") {
                 this.title = title1;
-                flag++;
+                count++;
             } else {
                 System.out.println("Title not provided");
                 throw new Exception("");
@@ -122,7 +123,7 @@ class Task {
     public String toString() {
         String s = "";
         s += gettitle() + ", " + getname() + ", " + gettime() + ", " + getimp() + ", " + geturgent() + ", " + getStatus();
-        if (flag == 0) {
+        if ((flag == 0) && (count == 0)) {
             return "";
         }
         return s;
