@@ -40,21 +40,18 @@ class Task {
             }
             if (title1 != "") {
                 this.title = title1;
-                count++;
             } else {
                 System.out.println("Title not provided");
                 throw new Exception("");
             }
-            // if (status == y) {
-            //     this.stat = status;
-            //     flag++;
-            // } else if (status == x) {
-            //     this.stat = status;
-            //     flag++;
-            // } else {
-            //     System.out.println("Invalid status " + status);
-            //     throw new Exception("");
-            // }
+            if ((status == x) || (status == y)) {
+                this.stat = status;
+                count++;
+            } else {
+                System.out.println("Invalid status " + status);
+                throw new Exception("");
+            }
+
         }
         catch(Exception e) {
         }
