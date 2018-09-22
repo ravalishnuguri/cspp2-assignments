@@ -1,6 +1,13 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
+class InvalidtimeException extends Exception {
+
+    InvalidtimeException(final String s) {
+        super(s);
+    }
+}
+
 /**
   * write your code below this comment
   */
@@ -23,10 +30,10 @@ class Task {
                 this.time = timeToComplete;
             }  else {
                 // System.out.println();
-                throw new Exception();
+                throw new InvalidtimeException("");
             }
         }
-        catch(Exception e) {
+        catch(InvalidtimeException e) {
             System.out.println("Invalid timeToComplete " + timeToComplete);
         }
         
