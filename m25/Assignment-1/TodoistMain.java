@@ -28,7 +28,7 @@ class Task {
             // this.title = title1;
             this.name = assignedTo;
             // this.time = timeToComplete;
-            // this.stat = status;
+            this.stat = status;
             this.imp = important;
             this.urg = urgent;
             if (timeToComplete > 0) {
@@ -38,19 +38,22 @@ class Task {
                 System.out.println("Invalid timeToComplete " + timeToComplete);
                 throw new Exception("");
             }
-            if (title1 != "") {
-                this.title = title1;
-            } else {
+            if (title1.isEmpty()) {
                 System.out.println("Title not provided");
                 throw new Exception("");
-            }
-            if ((status == x) || (status == y)) {
-                this.stat = status;
-                count++;
+                
             } else {
-                System.out.println("Invalid status " + status);
-                throw new Exception("");
+                this.title = title1;
+                count++;
+                
             }
+            // if ((status == x) || (status == y)) {
+            //     this.stat = status;
+            //     count++;
+            // } else {
+            //     System.out.println("Invalid status " + status);
+            //     throw new Exception("");
+            // }
 
         }
         catch(Exception e) {
