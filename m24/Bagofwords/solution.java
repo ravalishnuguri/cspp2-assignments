@@ -13,8 +13,15 @@ import java.io.BufferedReader;
  * Class for plagiarism.
  */
 class plagiarism {
-    public HashMap map(File filename) {
-        HashMap<String,Integer> hm = new <String,Integer>HashMap();
+    /**
+     * { function_description }
+     *
+     * @param      filename  The filename
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public HashMap map(final File filename) {
+        HashMap <String, Integer> hm = new <String, Integer> HashMap();
         try {
             BufferedReader b = new BufferedReader(new FileReader(filename));
             String str = b.readLine();
@@ -22,32 +29,33 @@ class plagiarism {
                 String[] line = str.split(" ");
                 String word = "";
                 for (int i = 0; i < line.length; i++) {
-                    word = line[i].replaceAll("[.,*%&!@ #$():?-]","").trim().toLowerCase();
-                    if (word.length() > 0){
+    word = line[i].replaceAll("[.,*%&!@ #$():?-]", "").trim().toLowerCase();
+                    if (word.length() > 0) {
                         if (hm.containsKey(word)) {
-                            hm.put(word,hm.get(word) + 1);
+                            hm.put(word, hm.get(word) + 1);
                         } else {
-                            hm.put(word,1);
+                            hm.put(word, 1);
                         }
                     }
                 }
                 str = b.readLine();
             }
-        } catch(Exception e){
+        } catch (Exception e){
             System.out.println(e);
         }
         return hm;
     }
     /**
-     * { function_description }
+     * function_description.
      *
      * @param      hm1   The hm 1
      * @param      hm2   The hm 2
      *
      * @return     { description_of_the_return_value }
      */
-    public double similarity(HashMap<String,Integer> hm1,HashMap<String,Integer> hm2) {
-        double frequencyvector1 = 0,frequencyvector2 = 0;
+    public double similarity(final HashMap<String,Integer> hm1,
+        final HashMap<String,Integer> hm2) {
+        double frequencyvector1 = 0, frequencyvector2 = 0;
         double similarity;
         int dotproduct = 0;
         for (int i : hm1.values()) {
@@ -87,7 +95,7 @@ class solution {
         String foldername;
         try {
             foldername = sc.nextLine();
-        } catch (Exception e){
+        } catch (Exception e) {
             System.out.println("empty directory");
             return;
         }
