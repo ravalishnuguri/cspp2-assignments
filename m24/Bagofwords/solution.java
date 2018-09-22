@@ -51,25 +51,25 @@ class plagiarism {
         double similarity;
         int dotproduct = 0;
         
-        for(int i:hm1.values()) {
+        for(int i : hm1.values()) {
             frequencyvector1 = frequencyvector1 + Math.pow(i,2);
         }
         frequencyvector1 = Math.sqrt(frequencyvector1);
         
 
-        for(int i:hm2.values()) {
+        for(int i : hm2.values()) {
             frequencyvector2 = frequencyvector2 + Math.pow(i,2);
         }
         frequencyvector2 = Math.sqrt(frequencyvector2);
         
 
 
-        for(String i: hm1.keySet()) {
+        for(String i : hm1.keySet()) {
             if(hm2.containsKey(i)) {
                 dotproduct = dotproduct + hm1.get(i) * hm2.get(i);
             }
         }
-        similarity = dotproduct/(frequencyvector2*frequencyvector1);
+        similarity = dotproduct / (frequencyvector2 * frequencyvector1);
         return similarity;
     }   
 }
@@ -86,9 +86,9 @@ class solution {
         
         Scanner sc = new Scanner(System.in);
         String foldername;
-        try{
+        try {
             foldername = sc.nextLine();
-        }catch(Exception e){
+        } catch(Exception e){
             System.out.println("empty directory");
             return;
         }
@@ -98,26 +98,27 @@ class solution {
         plagiarism p = new plagiarism();
         int temp = 0;
         long[][] result = new long[filearray.length][filearray.length];
-        for(File print:filearray) {
+        for (File print:filearray) {
             hashmaparray[temp] = p.map(print);
             temp++;
         }
-        for(int i = 0;i<filearray.length;i++) {
-            for(int j = 0; j< filearray.length;j++) {
+        for (int i = 0; i < filearray.length; i++) {
+            for(int j = 0; j < filearray.length; j++) {
                 result[i][j] = Math.round(p.similarity(hashmaparray[i],hashmaparray[j])*100);
             }
         }
         System.out.print("\t\t");
-        for(int i = 0; i< filearray.length;i++) {
+        for (int i = 0; i < filearray.length; i++) {
             System.out.print(filearray[i].toString().split("\\\\")[1]+"\t");
         }
         System.out.println();
-        for(int i = 0; i < filearray.length;i++) {
+        for (int i = 0; i < filearray.length; i++) {
             System.out.print(filearray[i].toString().split("\\\\")[1]+"\t");
-            for(int j = 0; j < filearray.length; j++) {
-                System.out.print(result[i][j]+"\t\t");
+            for (int j = 0; j < filearray.length; j++) {
+                System.out.print(result[i][j] + "\t\t");
             }
             System.out.println();
         }
+
     } 
 }
