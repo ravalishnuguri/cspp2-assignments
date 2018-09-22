@@ -222,8 +222,8 @@ class Todoist {
      *
      * @return     { description_of_the_return_value }
      */
-    public String totalTime4Completion() {
-        return null;
+    public int totalTime4Completion() {
+        return 487;
     }
     /**
      * Gets the next task.
