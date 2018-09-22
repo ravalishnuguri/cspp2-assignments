@@ -20,46 +20,52 @@ class Task {
         this.urg = urgent;
     }
     public String gettitle() {
-        try {
-            if (this.title == "") {
-                throw new Exception("Title not provided");
-            } else {
-                return this.title;
-            }
-        }
-        catch(Exception e) {
-        }
-        return null;
-        }
+        // try {
+        //     if (this.title == "") {
+        //         System.out.println("Title not provided");
+        //         throw new Exception();
+        //     } else {
+        //         return this.title;
+        //     }
+        // }
+        // catch(Exception e) {
+        // }
+        return this.title;
+         }
     public String getname() {
         return this.name;
     }
     public int gettime() {
-        try {
-            if (this.time >= 0) {
-                return this.time;
-            } else {
-                throw new Exception("Invalid timeToComplete " + this.time);
-            }
-        }
-        catch(Exception e){
+    //     try {
+    //         if (this.time >= 0) {
+    //             return this.time;
+    //         } else {
+    //             throw new Exception("Invalid timeToComplete " + this.time);
+    //         }
+    //     }
+    //     catch(Exception e){
 
-        }
-        return 0;
-    }
+    //     }
+    //     return 0;
+    // }
+    return this.time;
+}
     public String getStatus() {
-        try {
-            if (this.stat == "todo") {
-                return this.stat;
-            } else if(this.stat == "done") {
-                return this.stat;
-            } else {
-                throw new Exception("Invalid status " + this.stat);
-            }
-        }
-        catch(Exception e) {
-        }
-        return null;
+        // String x = "";
+        // try {
+        //     if (this.stat == "todo") {
+        //           x += this.stat;
+        //     } else if(this.stat == "done") {
+        //         x += this.stat;
+        //     } else {
+        //         System.out.println("Invalid status " + this.stat);
+        //         throw new Exception();
+        //     }
+        // }
+        // catch(Exception e) {
+        // }
+        // return x;
+        return this.stat;
     }
     public String getimp() {
         if (this.imp) {
