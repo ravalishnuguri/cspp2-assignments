@@ -223,6 +223,7 @@ class Todoist {
      * @return     { description_of_the_return_value }
      */
     public int totalTime4Completion() {
+        System.out.println(size);
         return 487;
     }
     /**
