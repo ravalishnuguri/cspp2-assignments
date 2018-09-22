@@ -22,8 +22,8 @@ class Task {
             if (timeToComplete > 0) {
                 this.time = timeToComplete;
             }  else {
-                System.out.println("Invalid timeToComplete " + this.time);
-                throw new Exception();
+                // System.out.println();
+                throw new Exception("Invalid timeToComplete " + timeToComplete);
             }
         }
         catch(Exception e) {
