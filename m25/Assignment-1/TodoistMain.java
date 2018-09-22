@@ -18,17 +18,18 @@ class Task {
     boolean imp;
     boolean urg;
     String stat;
-    int flag,count;
+    int flag,count, count1;
     Task(String title1, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) {
         try {
             flag = 0;
             count = 0;
+            count1 = 0;
             x = "todo";
             y = "done";
             // this.title = title1;
             this.name = assignedTo;
             // this.time = timeToComplete;
-            this.stat = status;
+            // this.stat = status;
             this.imp = important;
             this.urg = urgent;
             if (timeToComplete > 0) {
@@ -47,12 +48,19 @@ class Task {
                 count++;
                 
             }
+            if (status.equals("todo") || status.equals("done")) {
+                this.stat = status;
+                count1++;
+            } else {
+                System.out.println("Invalid status " + status);
+                 throw new Exception("");
+
+            }
             // if ((status == x) || (status == y)) {
             //     this.stat = status;
             //     count++;
             // } else {
-            //     System.out.println("Invalid status " + status);
-            //     throw new Exception("");
+            //     
             // }
 
         }
@@ -126,6 +134,8 @@ class Task {
         if (flag == 0) {
             return "";
         } else if (count == 0) {
+            return "";
+        } else if (count1 == 0) {
             return "";
         }
         return s;
