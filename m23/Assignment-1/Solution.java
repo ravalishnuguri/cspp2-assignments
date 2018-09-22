@@ -94,11 +94,3 @@ class solution {
         }
     } 
 }
-
-
-
-class stringmatching {
-    public double lcs(HashMap<String,Integer> hm1,HashMap<String,Integer> hm2) {
-        return 0;
-    }
-}
