@@ -15,15 +15,16 @@ class Task {
         try {
             this.title = title1;
             this.name = assignedTo;
-            this.time = timeToComplete;
+            // this.time = timeToComplete;
             this.stat = status;
             this.imp = important;
             this.urg = urgent;
-            if (this.time < 0) {
+            if (timeToComplete > 0) {
+                this.time = timeToComplete;
+            }  else {
                 System.out.println("Invalid timeToComplete " + this.time);
                 throw new Exception();
-                break;
-            } 
+            }
         }
         catch(Exception e) {
 
