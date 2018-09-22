@@ -18,8 +18,10 @@ class Task {
     boolean imp;
     boolean urg;
     String stat;
+    int flag;
     Task(String title1, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) {
         try {
+            flag = 0;
             this.title = title1;
             this.name = assignedTo;
             // this.time = timeToComplete;
@@ -28,6 +30,7 @@ class Task {
             this.urg = urgent;
             if (timeToComplete > 0) {
                 this.time = timeToComplete;
+                flag++;
             }  else {
                 // System.out.println();
                 throw new InvalidtimeException("");
@@ -101,6 +104,9 @@ class Task {
     public String toString() {
         String s = "";
         s += gettitle() + ", " + getname() + ", " + gettime() + ", " + getimp() + ", " + geturgent() + ", " + getStatus();
+        if (flag == 0) {
+            return "";
+        }
         return s;
     }
 }
