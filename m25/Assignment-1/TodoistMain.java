@@ -1,19 +1,19 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
-class InvalidtimeException extends Exception {
+// class InvalidtimeException extends Exception {
 
-    InvalidtimeException(final String s) {
-        super(s);
-    }
-}
+//     InvalidtimeException(final String s) {
+//         super(s);
+//     }
+// }
 
 /**
   * write your code below this comment
   */
 class Task {
     String title;
-    String name;
+    String name, x, y;
     int time;
     boolean imp;
     boolean urg;
@@ -22,22 +22,40 @@ class Task {
     Task(String title1, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) {
         try {
             flag = 0;
-            this.title = title1;
+            x = "todo";
+            y = "done";
+            // this.title = title1;
             this.name = assignedTo;
             // this.time = timeToComplete;
-            this.stat = status;
+            // this.stat = status;
             this.imp = important;
             this.urg = urgent;
             if (timeToComplete > 0) {
                 this.time = timeToComplete;
                 flag++;
             }  else {
-                // System.out.println();
-                throw new InvalidtimeException("");
+                System.out.println("Invalid timeToComplete " + timeToComplete);
+                throw new Exception("");
+            }
+            if (title1 != "") {
+                this.title = title1;
+                flag++;
+            } else {
+                System.out.println("Title not provided");
+                throw new Exception("");
+            }
+            if (status == y) {
+                this.stat = status;
+                flag++;
+            } else if (status == x) {
+                this.stat = status;
+                flag++;
+            } else {
+                System.out.println("Invalid status " + status);
+                throw new Exception("");
             }
         }
-        catch(InvalidtimeException e) {
-            System.out.println("Invalid timeToComplete " + timeToComplete);
+        catch(Exception e) {
         }
         
     }
