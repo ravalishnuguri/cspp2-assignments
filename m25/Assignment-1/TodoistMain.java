@@ -20,7 +20,9 @@ class Task {
             this.imp = important;
             this.urg = urgent;
             if (this.time < 0) {
-                throw new Exception("Invalid timeToComplete" + this.time);
+                System.out.println("Invalid timeToComplete " + this.time);
+                throw new Exception();
+                break;
             } 
         }
         catch(Exception e) {
