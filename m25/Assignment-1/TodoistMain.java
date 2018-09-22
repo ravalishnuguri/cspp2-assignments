@@ -23,11 +23,11 @@ class Task {
                 this.time = timeToComplete;
             }  else {
                 // System.out.println();
-                throw new Exception("Invalid timeToComplete " + timeToComplete);
+                throw new Exception();
             }
         }
         catch(Exception e) {
-
+            System.out.println("Invalid timeToComplete " + timeToComplete);
         }
         
     }
